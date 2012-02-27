@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ehcache>
+  <!-- cache name="com.somecompany.someproject.domain.Country.advancedSearchFacilities" 
+    maxEntriesLocalHeap="450" eternal="false" timeToLiveSeconds="600" overflowToDisk="true" 
+    / -->
+  <defaultCache maxElementsInMemory="100000" eternal="false" maxEntriesLocalHeap="450"
+    overflowToDisk="true" timeToLiveSeconds="600" timeToIdleSeconds="30" />
+</ehcache>
