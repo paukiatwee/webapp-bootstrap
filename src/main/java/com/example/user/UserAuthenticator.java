@@ -38,9 +38,7 @@ class UserAuthenticator implements UserDetailsService {
         // TODO implement your own authenticator
         Admin admin = new Admin();
         admin.setUsername("admin");
-        LOGGER.debug("1User password[{}]", admin.getPassword());
         admin.setPassword(encoder.encodePassword("admin", null));
-        LOGGER.debug("User password[{}]", admin.getPassword());
         return admin;
     }
 

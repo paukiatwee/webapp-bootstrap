@@ -37,7 +37,7 @@
           </div>
         </div>
         <div class="span5">
-          <form class="well" action="/" method="post">
+          <form class="well" action="/login" method="post">
             <h3>Sign In</h3>
             <label for="username">Username</label>
             <input type="text" class="input-xlarge" name="j_username" placeholder="Your username..." autocomplete="off" autofocus="autofocus">
