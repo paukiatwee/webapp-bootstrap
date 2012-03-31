@@ -11,18 +11,24 @@
   
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    <spring.version>3.1.0.RELEASE</spring.version>
-    <hibernate.version>4.1.0.Final</hibernate.version>
-    <validator.version>4.2.0.Final</validator.version>
-    <ehcache.version>2.5.1</ehcache.version>
-    <slf4j.version>1.6.4</slf4j.version>
-    <log4j.version>1.2.16</log4j.version>
-    <hsqldb.version>2.2.4</hsqldb.version>
+    <org.springframework.version>3.1.1.RELEASE</org.springframework.version>
+    <org.springframework.spring-security-web.version>3.1.0.RELEASE</org.springframework.spring-security-web.version>
+    <org.springframework.spring-security-core.version>3.1.0.RELEASE</org.springframework.spring-security-core.version>
+    <org.springframework.spring-security-taglibs.version>3.1.0.RELEASE</org.springframework.spring-security-taglibs.version>
+    <org.springframework.spring-security-config.version>3.1.0.RELEASE</org.springframework.spring-security-config.version>
+    <org.hibernate.version>4.1.1.Final</org.hibernate.version>
+    <validator.version>4.3.0.Final</validator.version>
+    <net.sf.ehcache.version>2.5.1</net.sf.ehcache.version>
+    <org.slf4j.version>1.6.4</org.slf4j.version>
+    <log4j.log4j.version>1.2.16</log4j.log4j.version>
+    <org.hsqldb.version>2.2.8</org.hsqldb.version>
     <cglib.version>2.2.2</cglib.version>
     <junit.version>4.10</junit.version>
-    <guava.version>11.0.2</guava.version>
+    <com.google.guava.version>11.0.2</com.google.guava.version>
     <servlet.version>2.5</servlet.version>
-    <selenium.version>2.19.0</selenium.version>
+    <jstl.version>1.2</jstl.version>
+    <org.seleniumhq.version>2.20.0</org.seleniumhq.version>
+    <org.mortbay.jetty.version>8.1.2.v20120308</org.mortbay.jetty.version>
   </properties>
   
   <build>
@@ -64,7 +70,7 @@
         <plugin>
           <groupId>org.mortbay.jetty</groupId>
           <artifactId>jetty-maven-plugin</artifactId>
-          <version>8.1.0.v20120127</version>
+          <version>${org.mortbay.jetty.version}</version>
         </plugin>
         <plugin>
           <artifactId>maven-resources-plugin</artifactId>
@@ -166,42 +172,42 @@
     <dependency>
       <groupId>com.google.guava</groupId>
       <artifactId>guava</artifactId>
-      <version>${guava.version}</version>
+      <version>${com.google.guava.version}</version>
     </dependency>
     <dependency>
       <groupId>org.slf4j</groupId>
       <artifactId>slf4j-api</artifactId>
-      <version>${slf4j.version}</version>
+      <version>${org.slf4j.version}</version>
     </dependency>
     <dependency>
       <groupId>org.slf4j</groupId>
       <artifactId>jcl-over-slf4j</artifactId>
-      <version>${slf4j.version}</version>
+      <version>${org.slf4j.version}</version>
       <scope>runtime</scope>
     </dependency>
     <dependency>
       <groupId>org.slf4j</groupId>
       <artifactId>slf4j-log4j12</artifactId>
-      <version>${slf4j.version}</version>
+      <version>${org.slf4j.version}</version>
       <scope>runtime</scope>
     </dependency>
     <dependency>
       <groupId>log4j</groupId>
       <artifactId>log4j</artifactId>
-      <version>${log4j.version}</version>
+      <version>${log4j.log4j.version}</version>
       <scope>runtime</scope>
     </dependency>
     <!-- in memory db -->
     <dependency>
       <groupId>org.hsqldb</groupId>
       <artifactId>hsqldb</artifactId>
-      <version>${hsqldb.version}</version>
+      <version>${org.hsqldb.version}</version>
     </dependency>
     <!-- spring -->
     <dependency>
       <groupId>org.springframework</groupId>
       <artifactId>spring-core</artifactId>
-      <version>${spring.version}</version>
+      <version>${org.springframework.version}</version>
       <exclusions>
         <exclusion>
           <groupId>commons-logging</groupId>
@@ -212,67 +218,67 @@
     <dependency>
       <groupId>org.springframework</groupId>
       <artifactId>spring-beans</artifactId>
-      <version>${spring.version}</version>
+      <version>${org.springframework.version}</version>
     </dependency>
     <dependency>
       <groupId>org.springframework.security</groupId>
       <artifactId>spring-security-web</artifactId>
-      <version>${spring.version}</version>
+      <version>${org.springframework.spring-security-web.version}</version>
     </dependency>
     <dependency>
       <groupId>org.springframework.security</groupId>
       <artifactId>spring-security-taglibs</artifactId>
-      <version>${spring.version}</version>
+      <version>${org.springframework.spring-security-taglibs.version}</version>
     </dependency>
     <dependency>
       <groupId>org.springframework</groupId>
       <artifactId>spring-context</artifactId>
-      <version>${spring.version}</version>
+      <version>${org.springframework.version}</version>
     </dependency>
     <dependency>
       <groupId>org.springframework</groupId>
       <artifactId>spring-orm</artifactId>
-      <version>${spring.version}</version>
+      <version>${org.springframework.version}</version>
     </dependency>
     <dependency>
       <groupId>org.springframework</groupId>
       <artifactId>spring-aop</artifactId>
-      <version>${spring.version}</version>
+      <version>${org.springframework.version}</version>
     </dependency>
     <dependency>
       <groupId>org.springframework</groupId>
       <artifactId>spring-web</artifactId>
-      <version>${spring.version}</version>
+      <version>${org.springframework.version}</version>
     </dependency>
     <dependency>
       <groupId>org.springframework</groupId>
       <artifactId>spring-tx</artifactId>
-      <version>${spring.version}</version>
+      <version>${org.springframework.version}</version>
     </dependency>
     <dependency>
       <groupId>org.springframework</groupId>
       <artifactId>spring-webmvc</artifactId>
-      <version>${spring.version}</version>
+      <version>${org.springframework.version}</version>
     </dependency>
     <dependency>
       <groupId>org.springframework.security</groupId>
       <artifactId>spring-security-core</artifactId>
-      <version>${spring.version}</version>
+      <version>${org.springframework.spring-security-core.version}</version>
     </dependency>
     <dependency>
       <groupId>org.springframework.security</groupId>
       <artifactId>spring-security-config</artifactId>
-      <version>${spring.version}</version>
+      <version>${org.springframework.spring-security-config.version}</version>
     </dependency>
     <dependency>
       <groupId>org.springframework</groupId>
       <artifactId>spring-expression</artifactId>
-      <version>${spring.version}</version>
+      <version>${org.springframework.version}</version>
     </dependency>
     <dependency>
       <groupId>org.springframework</groupId>
       <artifactId>spring-jdbc</artifactId>
-      <version>${spring.version}</version>
+      <version>${org.springframework.version}</version>
     </dependency>
 
     <!-- AOP dependency -->
@@ -286,7 +292,7 @@
     <dependency>
       <groupId>org.hibernate</groupId>
       <artifactId>hibernate-core</artifactId>
-      <version>${hibernate.version}</version>
+      <version>${org.hibernate.version}</version>
       <exclusions>
         <exclusion>
           <groupId>org.jboss.spec.javax.transaction</groupId>
@@ -297,7 +303,7 @@
     <dependency>
       <groupId>org.hibernate</groupId>
       <artifactId>hibernate-entitymanager</artifactId>
-      <version>${hibernate.version}</version>
+      <version>${org.hibernate.version}</version>
       <exclusions>
         <exclusion>
           <groupId>org.jboss.spec.javax.transaction</groupId>
@@ -308,7 +314,7 @@
     <dependency>
       <groupId>net.sf.ehcache</groupId>
       <artifactId>ehcache-core</artifactId>
-      <version>${ehcache.version}</version>
+      <version>${net.sf.ehcache.version}</version>
       <scope>runtime</scope>
     </dependency>
     
@@ -337,9 +343,14 @@
       <scope>provided</scope>
     </dependency>
     <dependency>
+      <groupId>javax.servlet</groupId>
+      <artifactId>jstl</artifactId>
+      <version>${jstl.version}</version>
+    </dependency>
+    <dependency>
       <groupId>org.seleniumhq.selenium</groupId>
       <artifactId>selenium-java</artifactId>
-      <version>${selenium.version}</version>
+      <version>${org.seleniumhq.version}</version>
       <scope>test</scope>
     </dependency>
     <dependency>
