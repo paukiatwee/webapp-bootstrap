@@ -17,7 +17,7 @@
     <org.springframework.spring-security-taglibs.version>3.1.0.RELEASE</org.springframework.spring-security-taglibs.version>
     <org.springframework.spring-security-config.version>3.1.0.RELEASE</org.springframework.spring-security-config.version>
     <org.hibernate.version>4.1.1.Final</org.hibernate.version>
-    <validator.version>4.3.0.Final</validator.version>
+    <org.hibernate.hibernate-validator.version>4.2.0.Final</org.hibernate.hibernate-validator.version>
     <net.sf.ehcache.version>2.5.1</net.sf.ehcache.version>
     <org.slf4j.version>1.6.4</org.slf4j.version>
     <log4j.log4j.version>1.2.16</log4j.log4j.version>
@@ -25,6 +25,7 @@
     <cglib.version>2.2.2</cglib.version>
     <junit.version>4.10</junit.version>
     <com.google.guava.version>11.0.2</com.google.guava.version>
+    <joda-time.joda-time.version>2.1</joda-time.joda-time.version>
     <servlet.version>2.5</servlet.version>
     <jstl.version>1.2</jstl.version>
     <org.seleniumhq.version>2.20.0</org.seleniumhq.version>
@@ -36,6 +37,16 @@
     <filters>
       <filter>src/main/filters/filter-${env}.properties</filter>
     </filters>
+    <resources>
+      <resource>
+        <directory>src/main/resources</directory>
+        <includes>
+          <include>**/*.xml</include>
+          <include>**/*.properties</include>
+        </includes>
+        <filtering>true</filtering>
+      </resource>
+    </resources>
     <pluginManagement>
       <plugins>
         <plugin>
@@ -174,6 +185,13 @@
       <artifactId>guava</artifactId>
       <version>${com.google.guava.version}</version>
     </dependency>
+    <!--  date time utility -->
+    <dependency>
+      <groupId>joda-time</groupId>
+      <artifactId>joda-time</artifactId>
+      <version>${joda-time.joda-time.version}</version>
+    </dependency>
+    
     <dependency>
       <groupId>org.slf4j</groupId>
       <artifactId>slf4j-api</artifactId>
@@ -311,11 +329,25 @@
         </exclusion>
       </exclusions>
     </dependency>
+    
+    <!-- cache -->
+    <dependency>
+      <groupId>org.hibernate</groupId>
+      <artifactId>hibernate-ehcache</artifactId>
+      <version>${org.hibernate.version}</version>
+    </dependency>
     <dependency>
       <groupId>net.sf.ehcache</groupId>
       <artifactId>ehcache-core</artifactId>
       <version>${net.sf.ehcache.version}</version>
       <scope>runtime</scope>
+    </dependency>
+    
+    <!--  bean validator -->
+    <dependency>
+      <groupId>org.hibernate</groupId>
+      <artifactId>hibernate-validator</artifactId>
+      <version>${org.hibernate.hibernate-validator.version}</version>
     </dependency>
     
     <dependency>
@@ -346,6 +378,16 @@
       <groupId>javax.servlet</groupId>
       <artifactId>jstl</artifactId>
       <version>${jstl.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>javax.transaction</groupId>
+      <artifactId>transaction-api</artifactId>
+      <version>1.1</version>
+    </dependency>
+    <dependency>
+      <groupId>javax.validation</groupId>
+      <artifactId>validation-api</artifactId>
+      <version>1.0.0.GA</version>
     </dependency>
     <dependency>
       <groupId>org.seleniumhq.selenium</groupId>
