@@ -37,21 +37,33 @@
           </div>
         </div>
         <div class="span5">
+          <c:if test="${isLoginError}">
+            <div class="alert alert-error">
+              <a class="close" data-dismiss="alert">×</a>
+              <h4 class="alert-heading">Authentication Failed</h4>
+              Combination of <strong>Username</strong> and <strong>Password</strong> is wrong.<br />
+              Please try again.
+            </div>
+          </c:if>
           <form class="well" action="/login" method="post">
             <h3>Sign In</h3>
-            <label for="username">Username</label>
-            <input type="text" class="input-xlarge" name="j_username" placeholder="Your username..." autocomplete="off" autofocus="autofocus">
-            <label for="password">Password</label>
-            <input type="password" class="input-xlarge" name="j_password" placeholder="Your password...">
+            <label for="j_username"><strong>Username</strong></label>
+            <input type="text" class="input-xlarge" name="j_username" id="j_username" placeholder="Your username..." autocomplete="off" autofocus="autofocus">
+            <label for="j_password"><strong>Password</strong></label>
+            <input type="password" class="input-xlarge" name="j_password" id="j_password" placeholder="Your password...">
             <label class="checkbox">
               <input type="checkbox"> Remember Me
             </label>
-            <button type="submit" class="btn btn-primary">Login</button>
-            <button type="reset" class="btn">Clear</button>
+            <button type="submit" class="btn btn-primary">Sign In</button>
           </form>
         </div>
       </div>
+      <hr>
+      <footer>
+        <p>&copy; Company 2012</p>
+      </footer>
     </div>
+    
     <script src="/assets/js/jquery.min.js"></script>
     <script src="/assets/js/bootstrap.min.js"></script>
   </body>
