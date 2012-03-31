@@ -18,6 +18,7 @@
     <org.springframework.spring-security-config.version>3.1.0.RELEASE</org.springframework.spring-security-config.version>
     <org.hibernate.version>4.1.1.Final</org.hibernate.version>
     <org.hibernate.hibernate-validator.version>4.2.0.Final</org.hibernate.hibernate-validator.version>
+    <org.hibernate.hibernate-jpamodelgen.version>1.2.0.Final</org.hibernate.hibernate-jpamodelgen.version>
     <net.sf.ehcache.version>2.5.1</net.sf.ehcache.version>
     <org.slf4j.version>1.6.4</org.slf4j.version>
     <log4j.log4j.version>1.2.16</log4j.log4j.version>
@@ -177,6 +178,24 @@
           </filesets>
         </configuration>
       </plugin>
+      <plugin>
+        <groupId>org.bsc.maven</groupId>
+        <artifactId>maven-processor-plugin</artifactId>
+        <version>2.0.5</version>
+        <executions>
+          <execution>
+            <id>process</id>
+            <goals>
+              <goal>process</goal>
+            </goals>
+            <phase>generate-sources</phase>
+            <configuration>
+              <!-- source output directory -->
+              <outputDirectory>src/main/java</outputDirectory>
+            </configuration>
+          </execution>
+        </executions>
+      </plugin>
     </plugins>
   </build>
   <dependencies>
@@ -304,6 +323,19 @@
       <groupId>cglib</groupId>
       <artifactId>cglib</artifactId>
       <version>${cglib.version}</version>
+    </dependency>
+    
+    <!-- hibernate static metamodel processor -->
+    <dependency>
+      <groupId>org.hibernate</groupId>
+      <artifactId>hibernate-jpamodelgen</artifactId>
+      <version>${org.hibernate.hibernate-jpamodelgen.version}</version>
+      <exclusions>
+        <exclusion>
+          <groupId>org.hibernate.javax.persistence</groupId>
+          <artifactId>hibernate-jpa-2.0-api</artifactId>
+        </exclusion>
+      </exclusions>
     </dependency>
     
     <!-- hibernate -->

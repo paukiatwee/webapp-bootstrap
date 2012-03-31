@@ -3,12 +3,21 @@
  */
 package com.example.user;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Inheritance;
+import javax.persistence.InheritanceType;
+
 import org.springframework.security.core.userdetails.UserDetails;
 
 /**
  * @author Pau Kiat Wee (mailto:paukiatwee@gmail.com)
  *
  */
+@Entity
+@Inheritance(strategy=InheritanceType.JOINED)
 abstract class AbstractUser implements UserDetails {
 
     /**
@@ -16,6 +25,9 @@ abstract class AbstractUser implements UserDetails {
      */
     private static final long serialVersionUID = 8399544408338444314L;
     
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
     private String username;
     private String password;
     private boolean accountNonExpired = true;
@@ -25,6 +37,19 @@ abstract class AbstractUser implements UserDetails {
 
     
     
+    
+    /**
+     * @return the id
+     */
+    public Long getId() {
+        return id;
+    }
+    /**
+     * @param id the id to set
+     */
+    public void setId(Long id) {
+        this.id = id;
+    }
     /**
      * @return the username
      */
