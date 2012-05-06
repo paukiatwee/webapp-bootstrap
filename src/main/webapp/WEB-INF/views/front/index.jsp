@@ -1,6 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<%@taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt" %>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -61,6 +62,7 @@
       <hr>
       <footer>
         <p>&copy; Company 2012</p>
+        <p>Build Timestamp: <fmt:message key="build.timestamp" /></p>
       </footer>
     </div>
     
