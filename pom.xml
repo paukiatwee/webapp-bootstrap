@@ -175,19 +175,39 @@
       </plugin>
       <plugin>
         <artifactId>maven-clean-plugin</artifactId>
-        <configuration>
-          <filesets>
-            <fileset>
-              <directory>${basedir}/src/main/webapp/WEB-INF/lib</directory>
-              <includes>
-                <include>**/*.jar</include>
-              </includes>
-              <excludes>
-              </excludes>
-              <followSymlinks>false</followSymlinks>
-            </fileset>
-          </filesets>
-        </configuration>
+        <executions>
+          <execution>
+            <configuration>
+              <filesets>
+                <fileset>
+                  <directory>${basedir}/src/main/webapp/WEB-INF/lib</directory>
+                  <includes>
+                    <include>**/*.jar</include>
+                  </includes>
+                  <followSymlinks>false</followSymlinks>
+                </fileset>
+              </filesets>
+            </configuration>
+          </execution>
+          <execution>
+            <id>remove-staticmetamodel</id>
+            <goals>
+              <goal>clean</goal>
+            </goals>
+            <phase>generate-sources</phase>
+            <configuration>
+              <filesets>
+                <fileset>
+                  <directory>${basedir}/src/main/java</directory>
+                  <includes>
+                    <include>**/*_.java</include>
+                  </includes>
+                  <followSymlinks>false</followSymlinks>
+                </fileset>
+              </filesets>
+            </configuration>
+          </execution>
+        </executions>
       </plugin>
       <plugin>
         <groupId>org.bsc.maven</groupId>
