@@ -7,12 +7,22 @@
     <span class="icon-bar"></span>
   </a>
   <a class="brand" href="#">Project name</a>
+  <div class="btn-group pull-right">
+    <a class="btn dropdown-toggle" data-toggle="dropdown" href="#">
+      <i class="icon-user"></i> <sec:authentication property="principal.username" />
+      <span class="caret"></span>
+    </a>
+    <ul class="dropdown-menu">
+      <li><a href="#">Profile</a></li>
+      <li class="divider"></li>
+      <li><a href="<c:url value="/logout" />">Sign Out</a></li>
+    </ul>
+  </div>
   <div class="nav-collapse">
     <ul class="nav">
       <li class="active"><a href="/secure/home">Home</a></li>
       <li><a href="<c:url value="/secure/about" />">About</a></li>
       <li><a href="<c:url value="/secure/contact" />">Contact</a></li>
     </ul>
-    <p class="navbar-text pull-right">Welcome, <sec:authentication property="principal.username" />. <a href="<c:url value="/logout" />">Logout</a></p>
   </div>
 </div>
