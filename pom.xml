@@ -163,7 +163,7 @@
             <goals>
               <goal>clean</goal>
             </goals>
-            <phase>compile</phase>
+            <phase>generate-sources</phase>
             <configuration>
               <filesets>
                 <fileset>
