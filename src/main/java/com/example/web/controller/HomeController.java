@@ -18,4 +18,15 @@ public class HomeController {
     public String home() {
         return "secure/home";
     }
+    
+    @RequestMapping(value = "about")
+    public String about() {
+        return "secure/about";
+    }
+    
+    @RequestMapping(value = "contact")
+    public String contact() {
+        return "secure/contact";
+    }
+    
 }

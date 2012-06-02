@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE tiles-definitions PUBLIC
+       "-//Apache Software Foundation//DTD Tiles Configuration 2.1//EN"
+       "http://tiles.apache.org/dtds/tiles-config_2_1.dtd">
+<tiles-definitions>
+  <definition name="secure" template="/WEB-INF/views/secure/layout.jsp">
+    <put-attribute name="title" value="" />
+    <put-attribute name="header" value="/WEB-INF/views/secure/header.jsp" />
+    <put-attribute name="top-menu" value="/WEB-INF/views/secure/top-menu.jsp" />
+    <put-attribute name="side-menu" value="/WEB-INF/views/secure/side-menu.jsp" />
+    <put-attribute name="footer" value="/WEB-INF/views/secure/footer.jsp" />
+  </definition>
+
+  <definition name="secure/home" extends="secure">
+    <put-attribute name="title" value="Contact Manager" />
+    <put-attribute name="body" value="/WEB-INF/views/secure/home.jsp" />
+  </definition>
+  <definition name="secure/about" extends="secure">
+    <put-attribute name="title" value="Contact Manager" />
+    <put-attribute name="body" value="/WEB-INF/views/secure/home.jsp" />
+  </definition>
+  <definition name="secure/contact" extends="secure">
+    <put-attribute name="title" value="Contact Manager" />
+    <put-attribute name="body" value="/WEB-INF/views/secure/home.jsp" />
+  </definition>
+</tiles-definitions>

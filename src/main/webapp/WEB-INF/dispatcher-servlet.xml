@@ -10,12 +10,22 @@
             http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc.xsd
         	">
   <context:component-scan base-package="com.example" />
-  <bean id="viewResolver" class="org.springframework.web.servlet.view.InternalResourceViewResolver"
-    p:prefix="/WEB-INF/views/" p:suffix=".jsp" />
+  <!-- Configure view technology -->
+  <bean id="viewResolver" class="org.springframework.web.servlet.view.UrlBasedViewResolver">
+    <property name="viewClass">
+      <value>org.springframework.web.servlet.view.tiles2.TilesView</value>
+    </property>
+  </bean>
+  <bean id="tilesConfigurer" class="org.springframework.web.servlet.view.tiles2.TilesConfigurer">
+    <property name="definitions">
+      <list>
+        <value>/WEB-INF/views/**/tiles.xml</value>
+      </list>
+    </property>
+  </bean>
 
   <!-- Configure the multipart resolver -->
-  <bean id="multipartResolver"
-    class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
+  <bean id="multipartResolver" class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
     <!-- one of the properties available; the maximum file size in bytes -->
     <property name="maxUploadSize" value="4194304" />
   </bean>
