@@ -30,7 +30,7 @@
       <property name="hibernate.hbm2ddl.auto" value="${db.hbm2dll}" />
       <property name="hibernate.show_sql" value="${db.show_sql}" />
       <property name="hibernate.format_sql" value="${db.format_sql}" />
-      <property name="hibernate.cache.region.factory_class" value="org.hibernate.cache.ehcache.EhCacheRegionFactory" />
+      <property name="hibernate.cache.region.factory_class" value="org.hibernate.cache.ehcache.SingletonEhCacheRegionFactory" />
       <property name="hibernate.cache.use_second_level_cache" value="true" />
       <property name="hibernate.cache.use_query_cache" value="true" />
       <property name="hibernate.cache.provider_configuration_file_resource_path" value="/ehcache.xml" />
