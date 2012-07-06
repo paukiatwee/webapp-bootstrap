@@ -26,6 +26,14 @@ public class Admin extends AbstractUser {
      */
     private static final long serialVersionUID = -8918046636801106791L;
 
+    
+    public Admin() {
+        
+    }
+    public Admin(long id) {
+        setId(id);
+    }
+
     @Override
     @Transient
     public Collection<? extends GrantedAuthority> getAuthorities() {

@@ -7,3 +7,16 @@ body{
 .sidebar-nav{
   padding: 9px 0;
 }
+.table .id {
+  text-align: right;
+}
+table .action{
+  width:120px;
+  text-align: center;
+}
+.icon-group {
+  color:black;
+}
+.icon-group.icon-white {
+  color:white;
+}

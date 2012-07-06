@@ -23,4 +23,12 @@
     <put-attribute name="title" value="Contact Manager" />
     <put-attribute name="body" value="/WEB-INF/views/secure/home.jsp" />
   </definition>
+  <definition name="secure/user" extends="secure">
+    <put-attribute name="title" value="User" />
+    <put-attribute name="body" value="/WEB-INF/views/secure/user.jsp" />
+  </definition>
+  <definition name="secure/users" extends="secure">
+    <put-attribute name="title" value="User" />
+    <put-attribute name="body" value="/WEB-INF/views/secure/users.jsp" />
+  </definition>
 </tiles-definitions>

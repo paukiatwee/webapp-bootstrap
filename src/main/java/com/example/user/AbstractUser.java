@@ -9,7 +9,9 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Inheritance;
 import javax.persistence.InheritanceType;
+import javax.validation.constraints.NotNull;
 
+import org.hibernate.validator.constraints.NotEmpty;
 import org.springframework.security.core.userdetails.UserDetails;
 
 /**
@@ -18,7 +20,7 @@ import org.springframework.security.core.userdetails.UserDetails;
  */
 @Entity
 @Inheritance(strategy=InheritanceType.JOINED)
-abstract class AbstractUser implements UserDetails {
+public abstract class AbstractUser implements UserDetails {
 
     /**
      * 
@@ -53,6 +55,9 @@ abstract class AbstractUser implements UserDetails {
     /**
      * @return the username
      */
+    @NotNull
+    @NotEmpty
+    @Override
     public String getUsername() {
         return username;
     }
@@ -65,6 +70,8 @@ abstract class AbstractUser implements UserDetails {
     /**
      * @return the password
      */
+    @NotNull
+    @NotEmpty
     @Override
     public String getPassword() {
         return password;
