@@ -18,6 +18,7 @@
   <bean id="entityManagerFactory" class="org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean">
     <property name="persistenceUnitName" value="transactions-optional" />
     <property name="dataSource" ref="dataSource" />
+    <property name="persistenceXmlLocation" value="classpath:META-INF/jpa-persistence.xml" />
   </bean>
   <bean name="transactionManager" class="org.springframework.orm.jpa.JpaTransactionManager">
     <property name="entityManagerFactory" ref="entityManagerFactory" />

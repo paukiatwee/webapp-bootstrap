@@ -21,6 +21,7 @@
           Caching behavior is undefined: provider-specific defaults may apply.
      -->
     <shared-cache-mode>ENABLE_SELECTIVE</shared-cache-mode>
+    <class>com.example.user.Admin</class>
     <properties>
       <property name="javax.persistence.jdbc.driver" value="${db.driver}" />
       <property name="javax.persistence.jdbc.url" value="${db.url}"/>

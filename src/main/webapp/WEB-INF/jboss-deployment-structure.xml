@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  This is to exclude build-in hibernate in Jboss AS7.
+  See https://docs.jboss.org/author/display/AS7/Implicit+module+dependencies+for+deployments
+-->
+<jboss-deployment-structure xmlns="urn:jboss:deployment-structure:1.0">
+  <deployment>
+    <exclusions>
+      <module name="org.hibernate"/>
+    </exclusions>
+  </deployment>
+</jboss-deployment-structure>
