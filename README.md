@@ -8,3 +8,15 @@ Getting Started
 2. To startup the webapp, you can run `mvn clean compile jetty:run` at the root of the project.
 3. After started webapp, you can browse to [http://localhost:8080](http://localhost:8080)
 4. That's all to getting started. :)
+
+Supported Container
+----------------------
++ Jetty 8
++ Tomcat 7
++ JBoss 7
+
+Supported PaaS
+----------------------
++ <a href="http://www.cloudfoundry.com" target="_blank">CloudFoundry</a>
++ <a href="https://openshift.redhat.com" target="_blank">OpenShift</a>
+
