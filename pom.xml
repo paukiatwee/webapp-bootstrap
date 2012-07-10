@@ -12,10 +12,7 @@
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <org.springframework.version>3.1.2.RELEASE</org.springframework.version>
-    <org.springframework.spring-security-web.version>3.1.1.RELEASE</org.springframework.spring-security-web.version>
-    <org.springframework.spring-security-core.version>3.1.1.RELEASE</org.springframework.spring-security-core.version>
-    <org.springframework.spring-security-taglibs.version>3.1.1.RELEASE</org.springframework.spring-security-taglibs.version>
-    <org.springframework.spring-security-config.version>3.1.1.RELEASE</org.springframework.spring-security-config.version>
+    <org.springframework.spring-security.version>3.1.1.RELEASE</org.springframework.spring-security.version>
     <org.hibernate.version>4.1.4.Final</org.hibernate.version>
     <org.hibernate.hibernate-validator.version>4.3.0.Final</org.hibernate.hibernate-validator.version>
     <org.hibernate.hibernate-jpamodelgen.version>1.2.0.Final</org.hibernate.hibernate-jpamodelgen.version>
@@ -332,12 +329,12 @@
     <dependency>
       <groupId>org.springframework.security</groupId>
       <artifactId>spring-security-web</artifactId>
-      <version>${org.springframework.spring-security-web.version}</version>
+      <version>${org.springframework.spring-security.version}</version>
     </dependency>
     <dependency>
       <groupId>org.springframework.security</groupId>
       <artifactId>spring-security-taglibs</artifactId>
-      <version>${org.springframework.spring-security-taglibs.version}</version>
+      <version>${org.springframework.spring-security.version}</version>
     </dependency>
     <dependency>
       <groupId>org.springframework</groupId>
@@ -372,12 +369,12 @@
     <dependency>
       <groupId>org.springframework.security</groupId>
       <artifactId>spring-security-core</artifactId>
-      <version>${org.springframework.spring-security-core.version}</version>
+      <version>${org.springframework.spring-security.version}</version>
     </dependency>
     <dependency>
       <groupId>org.springframework.security</groupId>
       <artifactId>spring-security-config</artifactId>
-      <version>${org.springframework.spring-security-config.version}</version>
+      <version>${org.springframework.spring-security.version}</version>
     </dependency>
     <dependency>
       <groupId>org.springframework</groupId>
