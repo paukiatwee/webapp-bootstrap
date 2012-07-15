@@ -13,10 +13,10 @@
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <org.springframework.version>3.1.2.RELEASE</org.springframework.version>
     <org.springframework.spring-security.version>3.1.1.RELEASE</org.springframework.spring-security.version>
-    <org.hibernate.version>4.1.4.Final</org.hibernate.version>
+    <org.hibernate.version>4.1.5.SP1</org.hibernate.version>
     <org.hibernate.hibernate-validator.version>4.3.0.Final</org.hibernate.hibernate-validator.version>
     <org.hibernate.hibernate-jpamodelgen.version>1.2.0.Final</org.hibernate.hibernate-jpamodelgen.version>
-    <net.sf.ehcache.version>2.5.2</net.sf.ehcache.version>
+    <net.sf.ehcache.version>2.5.3</net.sf.ehcache.version>
     <org.codehaus.jackson.version>1.9.8</org.codehaus.jackson.version>
     <org.slf4j.version>1.6.6</org.slf4j.version>
     <log4j.log4j.version>1.2.17</log4j.log4j.version>
