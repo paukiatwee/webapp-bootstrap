@@ -15,7 +15,7 @@
           ">
   <context:component-scan base-package="com.example" />
   <!-- JPA -->
-  <bean id="entityManagerFactory" class="org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean">
+  <bean id="entityManagerFactory" class="org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean" depends-on="liquibase">
     <property name="persistenceUnitName" value="transactions-optional" />
     <property name="dataSource" ref="dataSource" />
     <property name="persistenceXmlLocation" value="classpath:META-INF/jpa-persistence.xml" />
@@ -43,5 +43,10 @@
   <bean id="messageSource" class="org.springframework.context.support.ReloadableResourceBundleMessageSource">
     <property name="basename" value="classpath:messages" />
     <property name="cacheSeconds" value="${reloadable.resource.bundle.message.source.cacha.seconds}" />
+  </bean>
+
+  <bean id="liquibase" class="liquibase.integration.spring.SpringLiquibase">
+    <property name="dataSource" ref="dataSource" />
+    <property name="changeLog" value="classpath:db-changelog.xml" />
   </bean>
 </beans>
