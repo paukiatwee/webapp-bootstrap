@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+         http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-2.0.xsd">
+
+  <changeSet id="1" author="pau">
+    <createTable tableName="abstractuser">
+      <column name="id" type="bigint" autoIncrement="true">
+        <constraints primaryKey="true" nullable="false"/>
+      </column>
+      <column name="username" type="varchar(255)">
+        <constraints nullable="false"/>
+      </column>
+      <column name="password" type="varchar(255)">
+        <constraints nullable="false"/>
+      </column>
+      <column name="accountNonExpired" type="boolean"/>
+      <column name="accountNonLocked" type="boolean"/>
+      <column name="credentialsNonExpired" type="boolean"/>
+      <column name="enabled" type="boolean"/>
+    </createTable>
+  </changeSet>
+  
+  <changeSet id="2" author="pau">
+    <createTable tableName="admin">
+      <column name="id" type="bigint">
+        <constraints primaryKey="true" nullable="false"/>
+      </column>
+    </createTable>
+
+    <addForeignKeyConstraint constraintName="fk_admin_abstractuser"
+                             baseTableName="admin" baseColumnNames="id"
+                             referencedTableName="abstractuser" referencedColumnNames="id" />
+  </changeSet>
+
+</databaseChangeLog>
