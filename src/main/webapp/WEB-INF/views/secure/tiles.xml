@@ -12,7 +12,7 @@
   </definition>
 
   <definition name="secure/home" extends="secure">
-    <put-attribute name="title" value="Home" />
+    <put-attribute name="title" value="Dashboard" />
     <put-attribute name="body" value="/WEB-INF/views/secure/home.jsp" />
   </definition>
   <definition name="secure/profile" extends="secure">
@@ -32,11 +32,11 @@
     <put-attribute name="body" value="/WEB-INF/views/secure/users.jsp" />
   </definition>
   <definition name="secure/about" extends="secure">
-    <put-attribute name="title" value="Contact Manager" />
+    <put-attribute name="title" value="About" />
     <put-attribute name="body" value="/WEB-INF/views/secure/home.jsp" />
   </definition>
   <definition name="secure/contact" extends="secure">
-    <put-attribute name="title" value="Contact Manager" />
+    <put-attribute name="title" value="Contact" />
     <put-attribute name="body" value="/WEB-INF/views/secure/home.jsp" />
   </definition>
 </tiles-definitions>

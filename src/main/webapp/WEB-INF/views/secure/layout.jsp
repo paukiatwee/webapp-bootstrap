@@ -7,7 +7,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>Home | Company</title>
+    <title><tiles:getAsString name="title" /> | Company</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
 
@@ -38,6 +38,7 @@
           </div>
         </div>
         <div class="span9">
+          <h2><tiles:getAsString name="title" /></h2>
           <tiles:insertAttribute name="body" />
         </div>
       </div><!--/row-->
