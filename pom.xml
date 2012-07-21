@@ -27,8 +27,8 @@
     <joda-time.joda-time.version>2.1</joda-time.joda-time.version>
     <servlet.version>2.5</servlet.version>
     <jstl.version>1.2</jstl.version>
-    <org.seleniumhq.version>2.24.1</org.seleniumhq.version>
-    <org.mortbay.jetty.version>8.1.4.v20120524</org.mortbay.jetty.version>
+    <org.seleniumhq.version>2.25.0</org.seleniumhq.version>
+    <org.mortbay.jetty.version>8.1.5.v20120716</org.mortbay.jetty.version>
     <org.apache.tiles.version>2.2.2</org.apache.tiles.version>
     <junit.version>4.10</junit.version>
     <org.mockito.version>1.9.0</org.mockito.version>
