@@ -1,3 +1,3 @@
 <div class="row-fluid">
-  <h2>Dashboard</h2>
+  <h2>Profile</h2>
 </div>

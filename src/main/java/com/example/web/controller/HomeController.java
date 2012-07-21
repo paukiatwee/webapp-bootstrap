@@ -47,6 +47,16 @@ public class HomeController {
     public String contact() {
         return "secure/contact";
     }
+    
+    @RequestMapping(value = "/profile")
+    public String profile() {
+        return "secure/profile";
+    }
+    
+    @RequestMapping(value = "/settings")
+    public String settings() {
+        return "secure/settings";
+    }
 
     @RequestMapping(value = "/users")
     public String getUsers(Map<String, Object> m, HttpSession session) {

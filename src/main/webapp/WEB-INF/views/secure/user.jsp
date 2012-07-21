@@ -3,7 +3,7 @@
 <%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <%@taglib uri="http://www.springframework.org/tags/form" prefix="form"%>
 
-
+<h2>User</h2>
 <c:if test="${isCreateSuccess}">
   <div class="alert alert-success">
     <a class="close" data-dismiss="alert">×</a>

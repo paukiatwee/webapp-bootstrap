@@ -6,14 +6,14 @@
     <span class="icon-bar"></span>
     <span class="icon-bar"></span>
   </a>
-  <a class="brand" href="#">Project name</a>
+  <a class="brand" href="<c:url value="/" />">Webapp Bootstrap</a>
   <div class="btn-group pull-right">
     <a class="btn dropdown-toggle" data-toggle="dropdown" href="#">
       <i class="icon-user"></i> <sec:authentication property="principal.username" />
       <span class="caret"></span>
     </a>
     <ul class="dropdown-menu">
-      <li><a href="#">Profile</a></li>
+      <li><a href="<c:url value="/secure/profile" />">Profile</a></li>
       <li class="divider"></li>
       <li><a href="<c:url value="/logout" />">Sign Out</a></li>
     </ul>

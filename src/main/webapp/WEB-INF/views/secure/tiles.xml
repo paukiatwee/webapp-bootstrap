@@ -12,8 +12,24 @@
   </definition>
 
   <definition name="secure/home" extends="secure">
-    <put-attribute name="title" value="Contact Manager" />
+    <put-attribute name="title" value="Home" />
     <put-attribute name="body" value="/WEB-INF/views/secure/home.jsp" />
+  </definition>
+  <definition name="secure/profile" extends="secure">
+    <put-attribute name="title" value="Profile" />
+    <put-attribute name="body" value="/WEB-INF/views/secure/profile.jsp" />
+  </definition>
+  <definition name="secure/settings" extends="secure">
+    <put-attribute name="title" value="Settings" />
+    <put-attribute name="body" value="/WEB-INF/views/secure/settings.jsp" />
+  </definition>
+  <definition name="secure/user" extends="secure">
+    <put-attribute name="title" value="User" />
+    <put-attribute name="body" value="/WEB-INF/views/secure/user.jsp" />
+  </definition>
+  <definition name="secure/users" extends="secure">
+    <put-attribute name="title" value="Users" />
+    <put-attribute name="body" value="/WEB-INF/views/secure/users.jsp" />
   </definition>
   <definition name="secure/about" extends="secure">
     <put-attribute name="title" value="Contact Manager" />
@@ -22,13 +38,5 @@
   <definition name="secure/contact" extends="secure">
     <put-attribute name="title" value="Contact Manager" />
     <put-attribute name="body" value="/WEB-INF/views/secure/home.jsp" />
-  </definition>
-  <definition name="secure/user" extends="secure">
-    <put-attribute name="title" value="User" />
-    <put-attribute name="body" value="/WEB-INF/views/secure/user.jsp" />
-  </definition>
-  <definition name="secure/users" extends="secure">
-    <put-attribute name="title" value="User" />
-    <put-attribute name="body" value="/WEB-INF/views/secure/users.jsp" />
   </definition>
 </tiles-definitions>

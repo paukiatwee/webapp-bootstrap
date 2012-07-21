@@ -2,6 +2,7 @@
     pageEncoding="UTF-8"%>
 <%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 
+<h2>List of Users</h2>
 <c:if test="${isDeleteSuccess}">
   <div class="alert alert-success">
     <a class="close" data-dismiss="alert">×</a>
