@@ -5,21 +5,16 @@
     xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
          http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-2.0.xsd">
 
-  <changeSet id="3" author="pau">
-    <insert tableName="abstractuser">
+  <changeSet id="2" author="pau">
+    <insert tableName="user">
       <column name="id" valueNumeric="1" />
       <column name="username" value="admin" />
       <column name="password" value="8c6976e5b5410415bde908bd4dee15dfb167a9c873fc4bb8a81f6f2ab448a918" />
+      <column name="type" value="ADMIN" />
       <column name="accountNonExpired" valueBoolean="true" />
       <column name="accountNonLocked" valueBoolean="true" />
       <column name="credentialsNonExpired" valueBoolean="true" />
       <column name="enabled" valueBoolean="true" />
-    </insert>
-  </changeSet>
-  
-  <changeSet id="4" author="pau">
-    <insert tableName="admin">
-      <column name="id" valueNumeric="1" />
     </insert>
   </changeSet>
 

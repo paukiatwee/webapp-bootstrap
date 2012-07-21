@@ -37,7 +37,7 @@ class UserAuthenticator implements UserDetailsService {
         
         LOGGER.debug("Try to authenticate user[{}]", username);
         
-        TypedQuery<Admin> q = entityManager.createQuery("FROM Admin WHERE username = :username", Admin.class).setParameter("username", username);
+        TypedQuery<User> q = entityManager.createQuery("FROM User WHERE username = :username", User.class).setParameter("username", username);
 
         return q.getSingleResult();
     }

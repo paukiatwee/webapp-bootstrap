@@ -10,6 +10,10 @@ import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 import java.util.List;
 
+/**
+ * @author Pau Kiat Wee (mailto:paukiatwee@gmail.com)
+ *
+ */
 @Service
 @Transactional(readOnly = false)
 class DefaultUserService implements UserService {
@@ -28,25 +32,25 @@ class DefaultUserService implements UserService {
     }
 
     @Override
-    public void add(Admin admin) {
+    public void add(User admin) {
         admin.setPassword(encoder.encodePassword(admin.getPassword(), null));
         entityManager.persist(admin);
         entityManager.flush();
     }
 
     @Override
-    public Admin update(Admin admin) {
+    public User update(User admin) {
         return entityManager.merge(admin);
     }
 
     @Override
-    public List<Admin> getAllAdmins() {
-        return entityManager.createQuery("FROM Admin", Admin.class).getResultList();
+    public List<User> getAllAdmins() {
+        return entityManager.createQuery("FROM User", User.class).getResultList();
     }
 
     @Override
-    public Admin read(long id) {
-        return entityManager.find(Admin.class, id);
+    public User read(long id) {
+        return entityManager.find(User.class, id);
     }
 
     @Override

@@ -7,3 +7,5 @@ src/main/webapp/WEB-INF/classes/
 .idea/
 *.iml
 deployments/*.war
+# ignore metadata generated java files
+*_.java

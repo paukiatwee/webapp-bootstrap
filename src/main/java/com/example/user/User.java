@@ -3,24 +3,31 @@
  */
 package com.example.user;
 
+import org.hibernate.validator.constraints.NotEmpty;
+import org.springframework.security.core.GrantedAuthority;
+import org.springframework.security.core.authority.SimpleGrantedAuthority;
+import org.springframework.security.core.userdetails.UserDetails;
+
+import javax.persistence.Cacheable;
 import javax.persistence.Entity;
+import javax.persistence.EnumType;
+import javax.persistence.Enumerated;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.Inheritance;
-import javax.persistence.InheritanceType;
+import javax.persistence.Table;
 import javax.validation.constraints.NotNull;
-
-import org.hibernate.validator.constraints.NotEmpty;
-import org.springframework.security.core.userdetails.UserDetails;
+import java.util.Collection;
+import java.util.Collections;
 
 /**
  * @author Pau Kiat Wee (mailto:paukiatwee@gmail.com)
  *
  */
 @Entity
-@Inheritance(strategy=InheritanceType.JOINED)
-public abstract class AbstractUser implements UserDetails {
+@Cacheable(true)
+@Table(name = "\"user\"")
+public class User implements UserDetails {
 
     /**
      * 
@@ -36,6 +43,9 @@ public abstract class AbstractUser implements UserDetails {
     private boolean accountNonLocked = true;
     private boolean credentialsNonExpired = true;
     private boolean enabled = true;
+    @Enumerated(EnumType.STRING)
+    private Type type = Type.USER;
+
 
     
     
@@ -67,6 +77,21 @@ public abstract class AbstractUser implements UserDetails {
     public void setUsername(String username) {
         this.username = username;
     }
+
+
+    public Type getType() {
+        return type;
+    }
+
+    public void setType(Type type) {
+        this.type = type;
+    }
+
+    @Override
+    public Collection<? extends GrantedAuthority> getAuthorities() {
+        return Collections.singletonList(new SimpleGrantedAuthority(type.getRole()));
+    }
+
     /**
      * @return the password
      */

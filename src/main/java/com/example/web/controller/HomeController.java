@@ -3,7 +3,7 @@
  */
 package com.example.web.controller;
 
-import com.example.user.Admin;
+import com.example.user.User;
 import com.example.user.UserService;
 import org.springframework.stereotype.Controller;
 import org.springframework.validation.BindingResult;
@@ -59,7 +59,7 @@ public class HomeController {
     @RequestMapping(value = "/user", method = RequestMethod.GET)
     public String user(Map<String, Object> m, HttpSession  session) {
         m.put("isCreateSuccess", session.getAttribute("isCreateSuccess"));
-        m.put("model", new Admin());
+        m.put("model", new User());
         session.removeAttribute("isCreateSuccess");
         return "secure/user";
     }
@@ -74,7 +74,7 @@ public class HomeController {
     }
 
     @RequestMapping(value = "/user/update", method = RequestMethod.POST)
-    public String update(Map<String, Object> m, @ModelAttribute("model") @Valid Admin model, BindingResult result, HttpSession  session) {
+    public String update(Map<String, Object> m, @ModelAttribute("model") @Valid User model, BindingResult result, HttpSession  session) {
 
         if(result.hasErrors()) {
             m.put("isEdit", Boolean.TRUE);
@@ -94,7 +94,7 @@ public class HomeController {
     }
 
     @RequestMapping(value = "/user", method = RequestMethod.POST)
-    public String addUser(Map<String, Object> m, @ModelAttribute("model") @Valid Admin model, BindingResult result, HttpSession session) {
+    public String addUser(Map<String, Object> m, @ModelAttribute("model") @Valid User model, BindingResult result, HttpSession session) {
         if(result.hasErrors()) {
             return "secure/user";
         }
