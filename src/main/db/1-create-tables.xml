@@ -24,6 +24,9 @@
       <column name="credentialsNonExpired" type="boolean"/>
       <column name="enabled" type="boolean"/>
     </createTable>
+    <modifySql dbms="mysql">
+      <append value=" ENGINE InnoDB"/>
+    </modifySql>
   </changeSet>
 
 </databaseChangeLog>
