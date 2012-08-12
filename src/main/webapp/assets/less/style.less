@@ -1,0 +1,33 @@
+@import "bootstrap/bootstrap.less";
+@import "bootstrap/responsive.less";
+@import "font-awesome/font-awesome.less";
+@import "font-awesome/font-awesome-ie7.less";
+
+body{
+  margin:0;
+  overflow-y:scroll;
+  padding-top: 60px;
+  padding-bottom:40px;
+}
+.sidebar-nav{
+  padding: 9px 0;
+}
+.table {
+  .id {
+    text-align: right;
+  }
+  .action{
+    width:120px;
+    text-align: center;
+  }
+}
+.icon-group {
+  color:black;
+  &.icon-white {
+    color:white;
+  }
+}
+/* fix the icon overlap among bootstrap and font-awesome */
+.icon-home::before, .icon-user::before, .icon-cog::before, .icon-list::before, .icon-edit::before {
+  content: "";
+}

@@ -12,10 +12,7 @@
     <meta name="description" content="">
 
     <!-- Le styles -->
-    <link href="/assets/css/bootstrap.min.css" rel="stylesheet">
-    <link href="/assets/css/bootstrap-responsive.min.css" rel="stylesheet">
-    <link href="/assets/css/font-awesome.css" rel="stylesheet">
-    <link href="/assets/css/custom.css" rel="stylesheet">
+    <link href="/assets/css/style.css" rel="stylesheet">
 
     <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
     <!--[if lt IE 9]>
