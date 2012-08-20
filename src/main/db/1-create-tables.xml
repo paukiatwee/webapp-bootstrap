@@ -19,9 +19,9 @@
       <column name="type" type="varchar(10)">
         <constraints nullable="false" />
       </column>
-      <column name="accountNonExpired" type="boolean"/>
-      <column name="accountNonLocked" type="boolean"/>
-      <column name="credentialsNonExpired" type="boolean"/>
+      <column name="accountnonexpired" type="boolean"/>
+      <column name="accountnonlocked" type="boolean"/>
+      <column name="credentialsnonexpired" type="boolean"/>
       <column name="enabled" type="boolean"/>
     </createTable>
     <modifySql dbms="mysql">
