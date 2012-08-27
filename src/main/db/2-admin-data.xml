@@ -7,7 +7,7 @@
 
   <changeSet id="2" author="pau">
     <insert tableName="user">
-      <column name="username" value="admin" />
+      <column name="username" value="admin@example.com" />
       <column name="password" value="8c6976e5b5410415bde908bd4dee15dfb167a9c873fc4bb8a81f6f2ab448a918" />
       <column name="type" value="ADMIN" />
       <column name="accountnonexpired" valueBoolean="true" />

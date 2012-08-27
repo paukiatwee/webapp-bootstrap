@@ -3,6 +3,7 @@
  */
 package com.example.user;
 
+import org.hibernate.validator.constraints.Email;
 import org.hibernate.validator.constraints.NotEmpty;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
@@ -67,6 +68,7 @@ public class User implements UserDetails {
      */
     @NotNull
     @NotEmpty
+    @Email
     @Override
     public String getUsername() {
         return username;
