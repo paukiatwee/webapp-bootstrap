@@ -20,7 +20,7 @@
   </div>
   <div class="nav-collapse">
     <ul class="nav">
-      <li class="active"><a href="/secure/home">Home</a></li>
+      <li><a href="/secure/home">Home</a></li>
       <li><a href="<c:url value="/secure/about" />">About</a></li>
       <li><a href="<c:url value="/secure/contact" />">Contact</a></li>
     </ul>
