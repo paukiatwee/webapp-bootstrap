@@ -31,6 +31,10 @@
     <put-attribute name="title" value="Users" />
     <put-attribute name="body" value="/WEB-INF/views/secure/users.jsp" />
   </definition>
+  <definition name="secure/system" extends="secure">
+    <put-attribute name="title" value="System Properties" />
+    <put-attribute name="body" value="/WEB-INF/views/secure/system.jsp" />
+  </definition>
   <definition name="secure/about" extends="secure">
     <put-attribute name="title" value="About" />
     <put-attribute name="body" value="/WEB-INF/views/secure/home.jsp" />

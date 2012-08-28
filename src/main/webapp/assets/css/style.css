@@ -1395,7 +1395,7 @@ body{margin:0;overflow-y:scroll;padding-top:60px;padding-bottom:40px;}
 .sidebar-nav{padding:9px 0;}
 .table .id{text-align:right;}
 .table .action{width:120px;text-align:center;}
-.icon-group{color:black;}.icon-group.icon-white{color:white;}
+.icon-group,.icon-cogs{color:black;}.icon-group.icon-white,.icon-cogs.icon-white{color:white;}
 .icon-home::before,.icon-user::before,.icon-cog::before,.icon-list::before,.icon-edit::before{content:"";}
  
 

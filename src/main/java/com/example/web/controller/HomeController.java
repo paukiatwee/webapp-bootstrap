@@ -113,4 +113,10 @@ public class HomeController {
         return "redirect:/secure/user";
     }
     
+    @RequestMapping(value = "/system", method = RequestMethod.GET)
+    public String system(Map<String, Object> m) {
+        m.put("properties", System.getenv());
+        return "secure/system";
+    }
+    
 }
