@@ -49,4 +49,34 @@
     <property name="dataSource" ref="dataSource" />
     <property name="changeLog" value="classpath:db-changelog.xml" />
   </bean>
+  
+  <bean id="mailSender" class="org.springframework.mail.javamail.JavaMailSenderImpl">
+    <property name="host" value="${smtp.host}" />
+    <property name="port" value="${smtp.port}" />
+    <property name="username" value="${smtp.username}" />
+    <property name="password" value="${smtp.password}" />
+    <property name="javaMailProperties">
+      <props>
+        <!-- used by gmail smtp server -->
+        <prop key="mail.smtp.starttls.enable">true</prop>
+      </props>
+    </property>
+  </bean>
+  <bean id="templateMessage" class="org.springframework.mail.SimpleMailMessage">
+    <property name="from" value="${smtp.mail.from}" />
+  </bean>
+  
+  <!--
+    Thread pool definition for tasks to be executed asynchronously.
+  -->
+  <bean id="taskExecutor" class="org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor">
+    <property name="corePoolSize" value="5" />
+    <property name="maxPoolSize" value="10" />
+    <property name="queueCapacity" value="100" />
+    <property name="waitForTasksToCompleteOnShutdown" value="true" />
+  </bean>
+  
+  <bean id="mailService" class="com.example.mail.DefaultMailService">
+    <property name="isAsync" value="${mail.async}" />
+  </bean> 
 </beans>
