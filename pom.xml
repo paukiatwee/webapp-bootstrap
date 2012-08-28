@@ -4,7 +4,7 @@
 
   <groupId>com.example</groupId>
   <artifactId>web</artifactId>
-  <version>0.1-SNAPSHOT</version>
+  <version>1.0.0-SNAPSHOT</version>
   <packaging>war</packaging>
 
   <name>webapp</name>
