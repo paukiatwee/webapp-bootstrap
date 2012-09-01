@@ -576,7 +576,7 @@
      <!-- http://maven.apache.org/guides/mini/guide-building-for-different-environments.html -->
      <id>openshift</id>
      <properties>
-        <env>jboss</env>
+        <env>production</env>
       </properties>
      <build>
         <plugins>
