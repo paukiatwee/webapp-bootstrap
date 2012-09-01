@@ -23,7 +23,7 @@
     <org.hsqldb.version>2.2.8</org.hsqldb.version>
     <com.jolbox.bonecp.version>0.7.1.RELEASE</com.jolbox.bonecp.version>
     <cglib.version>2.2.2</cglib.version>
-    <com.google.guava.version>13.0</com.google.guava.version>
+    <com.google.guava.version>13.0.1</com.google.guava.version>
     <joda-time.joda-time.version>2.1</joda-time.joda-time.version>
     <servlet.version>2.5</servlet.version>
     <jstl.version>1.2</jstl.version>
@@ -508,7 +508,7 @@
     <dependency>
       <groupId>javax.mail</groupId>
       <artifactId>mail</artifactId>
-      <version>1.4.4</version>
+      <version>1.4.5</version>
     </dependency>
     
 
