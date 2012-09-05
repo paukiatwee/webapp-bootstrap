@@ -10,13 +10,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <meta name="author" content="">
-    <link href="/assets/css/style.css" rel="stylesheet">
+    <link href="/assets/css/style.css?${applicationScope.rev}" rel="stylesheet">
     <style>
       body {
         padding-top: 10px;
       }
     </style>
-    <link href="/assets/css/bootstrap-responsive.min.css" rel="stylesheet">
     <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
     <!--[if lt IE 9]>
       <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
@@ -66,7 +65,7 @@
       </footer>
     </div>
     
-    <script src="/assets/js/jquery.min.js"></script>
-    <script src="/assets/js/bootstrap.min.js"></script>
+    <script src="/assets/js/jquery.min.js?${applicationScope.rev}"></script>
+    <script src="/assets/js/bootstrap.min.js?${applicationScope.rev}"></script>
   </body>
 </html>

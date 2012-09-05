@@ -79,4 +79,11 @@
   <bean id="mailService" class="com.example.mail.DefaultMailService">
     <property name="isAsync" value="${mail.async}" />
   </bean> 
+  <bean class="com.example.application.Context">
+    <property name="properties">
+      <map>
+        <entry key="rev" value="${git.commit.id}" />
+      </map>
+    </property>
+  </bean>
 </beans>

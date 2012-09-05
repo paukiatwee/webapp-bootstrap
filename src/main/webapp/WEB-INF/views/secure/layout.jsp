@@ -13,7 +13,7 @@
     <meta name="description" content="">
 
     <!-- Le styles -->
-    <link href="/assets/css/style.css" rel="stylesheet">
+    <link href="/assets/css/style.css?${applicationScope.rev}" rel="stylesheet">
 
     <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
     <!--[if lt IE 9]>
@@ -48,8 +48,8 @@
     <!-- Le javascript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
-    <script src="/assets/js/jquery.min.js"></script>
-    <script src="/assets/js/bootstrap.min.js"></script>
-    <script src="/assets/js/script.min.js"></script>
+    <script src="/assets/js/jquery.min.js?${applicationScope.rev}"></script>
+    <script src="/assets/js/bootstrap.min.js?${applicationScope.rev}"></script>
+    <script src="/assets/js/script.min.js?${applicationScope.rev}"></script>
   </body>
 </html>
