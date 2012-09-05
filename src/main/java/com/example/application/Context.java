@@ -24,8 +24,6 @@ public class Context implements ServletContextAware, InitializingBean {
     @Override
     public void afterPropertiesSet() throws Exception {
         for(Entry<String, String> property: properties.entrySet()) {
-            System.out.println("==================================");
-            System.out.println(property);
             servletContext.setAttribute(property.getKey(), property.getValue());
         }
     }
