@@ -28,7 +28,7 @@
       <div class="hero-unit">
         <h1>Hello, world!</h1>
         <p>This is a <a href="https://github.com/paukiatwee/webapp-bootstrap" target="_blank">webapp-bootstrap</a> for a quick startup in creating Java based webapp. It includes a several famous frameworks such as <a href="http://www.springsource.org/" target="_blank">Springframework</a>, <a href="http://www.hibernate.org/" target="_blank">Hibernate</a> and <a href="http://twitter.github.com/bootstrap/" target="_blank">Twitter Bootstrap</a>. Use it as a starting point to create something more unique.</p>
-        <p><a class="btn btn-primary btn-large" href="https://github.com/paukiatwee/webapp-boostrap" target="_blank">Learn more »</a></p>
+        <p><a class="btn btn-primary btn-large" href="https://github.com/paukiatwee/webapp-bootstrap" target="_blank">Learn more »</a></p>
       </div>
       <div class="row">
         <div class="span7">
