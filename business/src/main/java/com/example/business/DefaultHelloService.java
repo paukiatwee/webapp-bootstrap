@@ -1,9 +1,16 @@
+/**
+ *
+ */
 package com.example.business;
 
+/**
+ * @author Pau Kiat Wee (mailto:paukiatwee@gmail.com)
+ *
+ */
 public class DefaultHelloService implements HelloService {
 
     @Override
     public void sayHello() {
-        //To change body of implemented methods use File | Settings | File Templates.
+
     }
 }

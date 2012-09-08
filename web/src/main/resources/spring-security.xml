@@ -5,11 +5,11 @@
       http://www.springframework.org/schema/security http://www.springframework.org/schema/security/spring-security.xsd">
   <beans:import resource="spring-context.xml"/>
   <!-- Configure security -->
-  <http pattern="/" security="none" />
+
   <http auto-config="true" use-expressions="true">
     <intercept-url pattern="/secure/**" access="hasAnyRole('ROLE_ADMIN')" />
     <form-login login-page="/?showlogin" login-processing-url="/login"
-      default-target-url="/secure/home" authentication-failure-url="/?login_error"
+      default-target-url="/secure/home" authentication-failure-url="/signin?login_error"
       always-use-default-target="true" />
     <logout invalidate-session="true" logout-url="/logout" delete-cookies="*" logout-success-url="/" />
   </http>

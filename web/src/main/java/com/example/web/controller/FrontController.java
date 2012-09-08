@@ -24,5 +24,14 @@ public class FrontController {
         }
         return "front/index";
     }
-    
+
+    @RequestMapping(value = "/about", method = RequestMethod.GET)
+    public String about(Model m) {
+        return "front/about";
+    }
+
+    @RequestMapping(value = "/signin", method = RequestMethod.GET)
+    public String signin() {
+        return "front/signin";
+    }
 }

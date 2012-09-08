@@ -6,9 +6,9 @@
   <definition name="secure" template="/WEB-INF/views/secure/layout.jsp">
     <put-attribute name="title" value="" />
     <put-attribute name="header" value="/WEB-INF/views/secure/header.jsp" />
-    <put-attribute name="top-menu" value="/WEB-INF/views/secure/top-menu.jsp" />
+    <put-attribute name="top-menu" value="/WEB-INF/views/common/top-menu.jsp" />
     <put-attribute name="side-menu" value="/WEB-INF/views/secure/side-menu.jsp" />
-    <put-attribute name="footer" value="/WEB-INF/views/secure/footer.jsp" />
+    <put-attribute name="footer" value="/WEB-INF/views/common/footer.jsp" />
   </definition>
 
   <definition name="secure/home" extends="secure">

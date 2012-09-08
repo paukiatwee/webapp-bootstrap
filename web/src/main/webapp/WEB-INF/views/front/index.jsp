@@ -2,34 +2,13 @@
     pageEncoding="UTF-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt" %>
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <title>Welcome to webapp-bootstrap</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="">
-    <meta name="author" content="">
-    <link href="/assets/css/style.css?${applicationScope.rev}" rel="stylesheet">
-    <style>
-      body {
-        padding-top: 10px;
-      }
-    </style>
-    <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
-    <!--[if lt IE 9]>
-      <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
-  </head>
 
-  <body>
-    <div class="container">
       <div class="hero-unit">
         <h1>Hello, world!</h1>
         <p>This is a <a href="https://github.com/paukiatwee/webapp-bootstrap" target="_blank">webapp-bootstrap</a> for a quick startup in creating Java based webapp. It includes a several famous frameworks such as <a href="http://www.springsource.org/" target="_blank">Springframework</a>, <a href="http://www.hibernate.org/" target="_blank">Hibernate</a> and <a href="http://twitter.github.com/bootstrap/" target="_blank">Twitter Bootstrap</a>. Use it as a starting point to create something more unique.</p>
         <p><a class="btn btn-primary btn-large" href="https://github.com/paukiatwee/webapp-bootstrap" target="_blank">Learn more »</a></p>
       </div>
-      <div class="row">
+      <div class="row-fluid">
         <div class="span7">
           <div class="well">
             <h1>HTML Ipsum Presents</h1>
@@ -58,14 +37,4 @@
           </form>
         </div>
       </div>
-      <hr>
-      <footer>
-        <p>&copy; Company 2012</p>
-        <p>Build Timestamp: <fmt:message key="build.timestamp" /></p>
-      </footer>
-    </div>
-    
-    <script src="/assets/js/jquery.min.js?${applicationScope.rev}"></script>
-    <script src="/assets/js/bootstrap.min.js?${applicationScope.rev}"></script>
-  </body>
-</html>
+
