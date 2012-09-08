@@ -22,12 +22,12 @@
     <div class="nav-collapse pull-right">
       <ul class="nav top">
         <li id="top"><a href="<c:url value="/secure/home" />">Dashboard</a></li>
+        <li class="divider-vertical"></li>
       </ul>
     </div>
   </sec:authorize>
   <sec:authorize access="isAnonymous()">
   <ul class="nav pull-right">
-    <li class="divider-vertical"></li>
     <li class="dropdown">
       <a class="dropdown-toggle" href="#" data-toggle="dropdown">Sign In <strong class="caret"></strong></a>
       <div class="dropdown-menu" style="padding: 15px; padding-bottom: 0px;">
