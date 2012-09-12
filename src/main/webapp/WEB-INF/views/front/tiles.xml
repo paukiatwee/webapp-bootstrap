@@ -3,10 +3,25 @@
        "-//Apache Software Foundation//DTD Tiles Configuration 2.1//EN"
        "http://tiles.apache.org/dtds/tiles-config_2_1.dtd">
 <tiles-definitions>
-  <definition name="front" template="/WEB-INF/views/front/index.jsp">
-    
+
+  <definition name="front" template="/WEB-INF/views/front/layout.jsp">
+    <put-attribute name="title" value="" />
+    <put-attribute name="top-menu" value="/WEB-INF/views/common/top-menu.jsp" />
+    <put-attribute name="footer" value="/WEB-INF/views/common/footer.jsp" />
   </definition>
+
   <definition name="front/index" extends="front">
-    
+    <put-attribute name="title" value="Welcome" />
+    <put-attribute name="body" value="/WEB-INF/views/front/index.jsp" />
+  </definition>
+
+  <definition name="front/about" extends="front">
+    <put-attribute name="title" value="About Us" />
+    <put-attribute name="body" value="/WEB-INF/views/front/about.jsp" />
+  </definition>
+
+  <definition name="front/signin" extends="front">
+    <put-attribute name="title" value="Sign In" />
+    <put-attribute name="body" value="/WEB-INF/views/front/signin.jsp" />
   </definition>
 </tiles-definitions>
