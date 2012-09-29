@@ -17,8 +17,8 @@
     <org.hibernate.hibernate-validator.version>4.3.0.Final</org.hibernate.hibernate-validator.version>
     <org.hibernate.hibernate-jpamodelgen.version>1.2.0.Final</org.hibernate.hibernate-jpamodelgen.version>
     <net.sf.ehcache.version>2.6.0</net.sf.ehcache.version>
-    <org.codehaus.jackson.version>1.9.9</org.codehaus.jackson.version>
-    <org.slf4j.version>1.7.0</org.slf4j.version>
+    <org.codehaus.jackson.version>1.9.10</org.codehaus.jackson.version>
+    <org.slf4j.version>1.7.1</org.slf4j.version>
     <log4j.log4j.version>1.2.17</log4j.log4j.version>
     <org.hsqldb.version>2.2.8</org.hsqldb.version>
     <com.jolbox.bonecp.version>0.7.1.RELEASE</com.jolbox.bonecp.version>
@@ -28,7 +28,7 @@
     <servlet.version>2.5</servlet.version>
     <jstl.version>1.2</jstl.version>
     <org.seleniumhq.version>2.25.0</org.seleniumhq.version>
-    <org.mortbay.jetty.version>8.1.5.v20120716</org.mortbay.jetty.version>
+    <org.mortbay.jetty.version>8.1.7.v20120910</org.mortbay.jetty.version>
     <org.apache.tiles.version>2.2.2</org.apache.tiles.version>
     <junit.version>4.10</junit.version>
     <org.mockito.version>1.9.0</org.mockito.version>
