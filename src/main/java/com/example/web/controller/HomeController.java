@@ -17,6 +17,7 @@ import javax.inject.Inject;
 import javax.servlet.http.HttpSession;
 import javax.validation.Valid;
 import java.util.Map;
+import java.util.TimeZone;
 
 /**
  * @author Pau Kiat Wee (mailto:paukiatwee@gmail.com)
@@ -116,7 +117,7 @@ public class HomeController {
     @RequestMapping(value = "/system", method = RequestMethod.GET)
     public String system(Map<String, Object> m) {
         m.put("properties", System.getenv());
+        m.put("timeZone", TimeZone.getDefault());
         return "secure/system";
     }
-    
 }

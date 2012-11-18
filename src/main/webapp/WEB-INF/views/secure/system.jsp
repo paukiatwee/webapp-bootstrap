@@ -5,6 +5,10 @@
 <h3>Product Information</h3>
 <table class="list">
   <tr>
+    <td>Time Zone</td>
+    <td>${timeZone}</td>
+  </tr>
+  <tr>
     <td>build.timestamp</td>
     <td><fmt:message key="build.timestamp" /></td>
   </tr>
