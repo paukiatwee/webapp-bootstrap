@@ -48,8 +48,8 @@
     <!-- Le javascript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
-    <script src="/assets/js/jquery.min.js?${applicationScope.rev}"></script>
-    <script src="/assets/js/bootstrap.min.js?${applicationScope.rev}"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/2.2.1/bootstrap.min.js"></script>
     <script src="/assets/js/script.min.js?${applicationScope.rev}"></script>
   </body>
 </html>
