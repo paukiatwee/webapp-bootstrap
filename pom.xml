@@ -328,6 +328,7 @@
       <version>${org.hsqldb.version}</version>
       <scope>runtime</scope>
     </dependency>
+
     <!-- JDBC Driver for MySQL -->
     <dependency>
       <groupId>mysql</groupId>
@@ -335,6 +336,13 @@
       <version>5.1.25</version>
       <scope>runtime</scope>
     </dependency>
+    <!-- JDBC Driver for PostgreSQL -->
+    <!--<dependency>-->
+      <!--<groupId>postgresql</groupId>-->
+      <!--<artifactId>postgresql</artifactId>-->
+      <!--<version>9.1-901.jdbc4</version>-->
+      <!--<scope>runtime</scope>-->
+    <!--</dependency>-->
     
     <!-- Lightweight connection pool -->
     <dependency>
