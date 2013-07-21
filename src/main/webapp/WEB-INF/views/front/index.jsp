@@ -9,11 +9,11 @@
   <p><a class="btn btn-primary btn-large" href="https://github.com/paukiatwee/webapp-bootstrap" target="_blank">Learn more »</a></p>
 </div>
 <div class="row">
-  <div class="col-7">
+  <div class="col-12 col-lg-7">
     <h1>HTML Ipsum Presents</h1>
     <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, commodo vitae, ornare sit amet, wisi. Aenean fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui. Donec non enim in turpis pulvinar facilisis. Ut felis. Praesent dapibus, neque id cursus faucibus, tortor neque egestas augue, eu vulputate magna eros eu erat. Aliquam erat volutpat. Nam dui mi, tincidunt quis, accumsan porttitor, facilisis luctus, metus</p>
   </div>
-  <div class="col-5">
+  <div class="col-12 col-lg-5">
     <c:if test="${isLoginError}">
       <div class="alert alert-error">
         <a class="close" data-dismiss="alert">×</a>

@@ -4,12 +4,12 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt" %>
 <%@ taglib uri="http://tiles.apache.org/tags-tiles" prefix="tiles"%>
 <div class="row">
-  <div class="span12">
+  <div class="col-12">
     <h1>Sign In <small>to manage your data</small></h1>
   </div>
 </div>
 <div class="row">
-  <div class="col-4 col-offset-4">
+  <div class="col-12 col-lg-4 col-sm-12 col-offset-4">
     <form class="well" action="/login" method="post">
       <label for="j_username"><strong>Username</strong></label>
       <input type="text" class="input-xlarge" name="j_username" id="j_username" placeholder="Your username..." autocomplete="off" autofocus="autofocus">
