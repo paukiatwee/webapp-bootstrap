@@ -9,7 +9,7 @@
   </div>
 </div>
 <div class="row">
-  <div class="span4 offset4">
+  <div class="col-4 col-offset-4">
     <form class="well" action="/login" method="post">
       <label for="j_username"><strong>Username</strong></label>
       <input type="text" class="input-xlarge" name="j_username" id="j_username" placeholder="Your username..." autocomplete="off" autofocus="autofocus">

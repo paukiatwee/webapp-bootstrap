@@ -34,8 +34,10 @@
         <td>${model.accountNonExpired}</td>
         <td>${model.accountNonLocked}</td>
         <td class="action">
-          <a href="${url}/${model.id}" class="btn btn-mini"><i class="icon-edit"></i> Edit</a>
-          <button type="button" data-id="${model.id}" class="btn btn-mini btn-danger delete"><i class="icon-trash icon-white"></i> Delete</button>
+          <form action="${url}/${model.id}">
+            <button type="submit" class="btn btn-primary btn-small"><span class="glyphicon glyphicon-edit"></span> Edit</button>
+            <button type="button" data-id="${model.id}" class="btn btn-small btn-danger delete"><i class="icon-trash icon-white"></i> Delete</button>
+          </form>
         </td>
       </tr>
     </c:forEach>

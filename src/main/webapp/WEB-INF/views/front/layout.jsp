@@ -8,14 +8,9 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title><tiles:getAsString name="title" /> | Company</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="">
-
-  <!-- Le styles -->
+  <title><tiles:getAsString name="title" /> | Company</title>
   <link href="/assets/css/style.css?${applicationScope.rev}" rel="stylesheet">
-
-  <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
   <!--[if lt IE 9]>
   <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
   <![endif]-->
@@ -23,19 +18,13 @@
 
 <body>
 <div class="navbar navbar-fixed-top">
-  <div class="navbar-inner">
-    <tiles:insertAttribute name="top-menu" />
-  </div>
+  <tiles:insertAttribute name="top-menu" />
 </div>
 
 <div class="container">
   <tiles:insertAttribute name="body" />
   <tiles:insertAttribute name="footer" />
-</div><!--/.fluid-container-->
-
-<!-- Le javascript
-================================================== -->
-<!-- Placed at the end of the document so the pages load faster -->
+</div>
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
 <script src="/assets/js/bootstrap.min.js?${applicationScope.rev}"></script>
 <script src="/assets/js/script.min.js?${applicationScope.rev}"></script>

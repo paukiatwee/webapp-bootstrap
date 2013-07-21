@@ -28,30 +28,28 @@
   </c:otherwise>
 </c:choose>
 
-
 <form:form class="form-horizontal" action="${url}" method="post" modelAttribute="model">
-  <fieldset>
-    <legend>${formTitle}</legend>
-    <div class="control-group">
-      <label class="control-label" for="username">Username</label>
-      <div class="controls">
-        <form:input path="username" placeholder="Username" autofocus="autofocus"/>
-        <span class="help-inline"><form:errors path="username" /></span>
-      </div>
+  <div class="row">
+    <label for="username" class="col-lg-4 control-label">Username</label>
+    <div class="col-lg-5">
+      <form:input path="username" class="input-with-feedback" placeholder="Username" autofocus="autofocus"/>
+      <span class="help-block"><form:errors path="username" /></span>
     </div>
-    <div class="control-group">
-      <label class="control-label" for="password">Password</label>
-      <div class="controls">
-        <form:input type="password" path="password" placeholder="Password" />
-        <span class="help-inline"><form:errors path="password" /></span>
-      </div>
+  </div>
+  <div class="row">
+    <label for="password" class="col-lg-4 control-label">Password</label>
+    <div class="col-lg-5">
+      <form:input type="password" path="password" class="input-with-feedback" placeholder="Password" />
+      <span class="help-block"><form:errors path="password" /></span>
     </div>
-    <div class="form-actions">
+  </div>
+  <div class="row">
+    <div class="col-lg-5 col-offset-4">
       <c:if test="${isEdit}">
-          <input type="hidden" name="id" value="${model.id}" />
+        <input type="hidden" name="id" value="${model.id}" />
       </c:if>
       <button type="submit" class="btn btn-large btn-primary"><i class="icon-save"></i> Save</button>
       <button type="reset" class="btn btn-large"><i class="icon-repeat"></i> Reset</button>
     </div>
-  </fieldset>
+  </div>
 </form:form>

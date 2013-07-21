@@ -1,7 +1,7 @@
-@import "bootstrap/bootstrap.less";
-@import "bootstrap/responsive.less";
-@import "font-awesome/font-awesome.less";
-@import "font-awesome/font-awesome-ie7.less";
+@import "bootstrap/bootstrap";
+@import "bootstrap-glyphicons/bootstrap-glyphicons";
+@import "font-awesome/font-awesome";
+@import "font-awesome/font-awesome-ie7";
 
 body{
   margin:0;
@@ -11,6 +11,16 @@ body{
 }
 .sidebar-nav{
   padding: 9px 0;
+  .nav-header {
+    padding: 10px 15px;
+    font-weight: bold;
+  }
+  .glyphicon {
+    color: black;
+  }
+  .active .glyphicon {
+    color:#ffffff;
+  }
 }
 .table {
   .id {
@@ -26,10 +36,6 @@ body{
   &.icon-white {
     color:white;
   }
-}
-/* fix the icon overlap among bootstrap and font-awesome */
-.icon-home::before, .icon-user::before, .icon-cog::before, .icon-list::before, .icon-edit::before {
-  content: "";
 }
 
 table.list {
