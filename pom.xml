@@ -11,7 +11,7 @@
   
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    <org.springframework.version>3.2.3.RELEASE</org.springframework.version>
+    <org.springframework.version>3.2.4.RELEASE</org.springframework.version>
     <org.springframework.spring-security.version>3.1.4.RELEASE</org.springframework.spring-security.version>
     <org.hibernate.version>4.2.3.Final</org.hibernate.version>
     <org.hibernate.hibernate-validator.version>5.0.1.Final</org.hibernate.hibernate-validator.version>
@@ -24,9 +24,8 @@
     <com.jolbox.bonecp.version>0.7.1.RELEASE</com.jolbox.bonecp.version>
     <com.google.guava.version>14.0.1</com.google.guava.version>
     <joda-time.joda-time.version>2.2</joda-time.joda-time.version>
-    <servlet.version>2.5</servlet.version>
+    <servlet.version>3.0.1</servlet.version>
     <jstl.version>1.2</jstl.version>
-    <org.seleniumhq.version>2.33.0</org.seleniumhq.version>
     <org.mortbay.jetty.version>8.1.11.v20130520</org.mortbay.jetty.version>
     <org.apache.tiles.version>3.0.1</org.apache.tiles.version>
     <junit.version>4.11</junit.version>
@@ -333,7 +332,7 @@
     <dependency>
       <groupId>mysql</groupId>
       <artifactId>mysql-connector-java</artifactId>
-      <version>5.1.25</version>
+      <version>5.1.26</version>
       <scope>runtime</scope>
     </dependency>
     <!-- JDBC Driver for PostgreSQL -->
@@ -529,7 +528,7 @@
     </dependency>
     <dependency>
       <groupId>javax.servlet</groupId>
-      <artifactId>servlet-api</artifactId>
+      <artifactId>javax.servlet-api</artifactId>
       <version>${servlet.version}</version>
       <scope>provided</scope>
     </dependency>
@@ -563,12 +562,6 @@
     </dependency>
     
     <!-- test -->
-    <dependency>
-      <groupId>org.seleniumhq.selenium</groupId>
-      <artifactId>selenium-java</artifactId>
-      <version>${org.seleniumhq.version}</version>
-      <scope>test</scope>
-    </dependency>
     <dependency>
       <groupId>junit</groupId>
       <artifactId>junit</artifactId>
