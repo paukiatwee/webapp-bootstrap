@@ -8,17 +8,17 @@
     <put-attribute name="footer" value="/WEB-INF/views/common/footer.jsp" />
   </definition>
 
-  <definition name="front/index" extends="front">
+  <definition name="/" extends="front">
     <put-attribute name="title" value="Welcome" />
     <put-attribute name="body" value="/WEB-INF/views/front/index.jsp" />
   </definition>
 
-  <definition name="front/about" extends="front">
+  <definition name="/about" extends="front">
     <put-attribute name="title" value="About Us" />
     <put-attribute name="body" value="/WEB-INF/views/front/about.jsp" />
   </definition>
 
-  <definition name="front/signin" extends="front">
+  <definition name="/signin" extends="front">
     <put-attribute name="title" value="Sign In" />
     <put-attribute name="body" value="/WEB-INF/views/front/signin.jsp" />
   </definition>

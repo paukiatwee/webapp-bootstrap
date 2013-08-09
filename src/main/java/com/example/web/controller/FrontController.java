@@ -22,17 +22,17 @@ public class FrontController {
         if("".equals(error)) {
             m.addAttribute("isLoginError", "true");
         }
-        return "front/index";
+        return "/";
     }
 
     @RequestMapping(value = "/about", method = RequestMethod.GET)
     public String about(Model m) {
-        return "front/about";
+        return "/about";
     }
 
     @RequestMapping(value = "/signin", method = RequestMethod.GET)
     public String signin() {
-        return "front/signin";
+        return "/signin";
     }
 
 }

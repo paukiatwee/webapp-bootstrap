@@ -25,7 +25,7 @@ import java.util.TimeZone;
  */
 @Controller
 @RequestMapping(value = "/secure")
-public class HomeController {
+public class SecureController {
 
     private UserService userService;
 
@@ -36,27 +36,27 @@ public class HomeController {
     
     @RequestMapping(value = "/home")
     public String home() {
-        return "secure/home";
+        return "/secure/home";
     }
     
     @RequestMapping(value = "/about")
     public String about() {
-        return "secure/about";
+        return "/secure/about";
     }
     
     @RequestMapping(value = "/contact")
     public String contact() {
-        return "secure/contact";
+        return "/secure/contact";
     }
     
     @RequestMapping(value = "/profile")
     public String profile() {
-        return "secure/profile";
+        return "/secure/profile";
     }
     
     @RequestMapping(value = "/settings")
     public String settings() {
-        return "secure/settings";
+        return "/secure/settings";
     }
 
     @RequestMapping(value = "/users")
@@ -64,7 +64,7 @@ public class HomeController {
         m.put("isDeleteSuccess", session.getAttribute("isDeleteSuccess"));
         session.removeAttribute("isDeleteSuccess");
         m.put("list", userService.getAllAdmins());
-        return "secure/users";
+        return "/secure/users";
     }
 
     @RequestMapping(value = "/user", method = RequestMethod.GET)
@@ -72,7 +72,7 @@ public class HomeController {
         m.put("isCreateSuccess", session.getAttribute("isCreateSuccess"));
         m.put("model", new User());
         session.removeAttribute("isCreateSuccess");
-        return "secure/user";
+        return "/secure/user";
     }
 
     @RequestMapping(value = "/user/{id}", method = RequestMethod.GET)
@@ -81,7 +81,7 @@ public class HomeController {
         m.put("model", userService.read(id));
         m.put("isEdit", Boolean.TRUE);
         session.removeAttribute("isUpdateSuccess");
-        return "secure/user";
+        return "/secure/user";
     }
 
     @RequestMapping(value = "/user/update", method = RequestMethod.POST)
@@ -89,7 +89,7 @@ public class HomeController {
 
         if(result.hasErrors()) {
             m.put("isEdit", Boolean.TRUE);
-            return "secure/user";
+            return "/secure/user";
         }
         userService.update(model);
         session.setAttribute("isUpdateSuccess", Boolean.TRUE);
@@ -107,7 +107,7 @@ public class HomeController {
     @RequestMapping(value = "/user", method = RequestMethod.POST)
     public String addUser(Map<String, Object> m, @ModelAttribute("model") @Valid User model, BindingResult result, HttpSession session) {
         if(result.hasErrors()) {
-            return "secure/user";
+            return "/secure/user";
         }
         session.setAttribute("isCreateSuccess", Boolean.TRUE);
         userService.add(model);
@@ -118,6 +118,6 @@ public class HomeController {
     public String system(Map<String, Object> m) {
         m.put("properties", System.getenv());
         m.put("timeZone", TimeZone.getDefault());
-        return "secure/system";
+        return "/secure/system";
     }
 }
