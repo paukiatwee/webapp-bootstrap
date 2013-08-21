@@ -17,16 +17,13 @@
 </head>
 
 <body>
-<div class="navbar navbar-fixed-top">
   <tiles:insertAttribute name="top-menu" />
-</div>
-
-<div class="container">
-  <tiles:insertAttribute name="body" />
-  <tiles:insertAttribute name="footer" />
-</div>
-<script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
-<script src="/assets/js/bootstrap.min.js?${applicationScope.rev}"></script>
-<script src="/assets/js/script.min.js?${applicationScope.rev}"></script>
+  <div class="container">
+    <tiles:insertAttribute name="body" />
+    <tiles:insertAttribute name="footer" />
+  </div>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+  <script src="/assets/js/bootstrap.min.js?${applicationScope.rev}"></script>
+  <script src="/assets/js/script.min.js?${applicationScope.rev}"></script>
 </body>
 </html>

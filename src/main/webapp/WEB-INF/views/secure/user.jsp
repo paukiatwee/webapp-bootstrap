@@ -32,19 +32,19 @@
   <div class="row">
     <label for="username" class="col-lg-4 control-label">Username</label>
     <div class="col-lg-5">
-      <form:input path="username" class="input-with-feedback" placeholder="Username" autofocus="autofocus"/>
+      <form:input path="username" class="form-control input-with-feedback" placeholder="Username" autofocus="autofocus"/>
       <span class="help-block"><form:errors path="username" /></span>
     </div>
   </div>
   <div class="row">
     <label for="password" class="col-lg-4 control-label">Password</label>
     <div class="col-lg-5">
-      <form:input type="password" path="password" class="input-with-feedback" placeholder="Password" />
+      <form:input type="password" path="password" class="form-control input-with-feedback" placeholder="Password" />
       <span class="help-block"><form:errors path="password" /></span>
     </div>
   </div>
   <div class="row">
-    <div class="col-lg-5 col-offset-4">
+    <div class="col-lg-5 col-lg-offset-4">
       <c:if test="${isEdit}">
         <input type="hidden" name="id" value="${model.id}" />
       </c:if>

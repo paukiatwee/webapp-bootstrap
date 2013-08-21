@@ -17,18 +17,16 @@
 </head>
 
   <body>
-    <div class="navbar navbar-fixed-top">
-      <tiles:insertAttribute name="top-menu" />
-    </div>
+    <tiles:insertAttribute name="top-menu" />
 
     <div class="container">
       <div class="row">
-        <div class="col-3">
+        <div class="col-lg-3">
           <div class="well sidebar-nav">
             <tiles:insertAttribute name="side-menu" />
           </div>
         </div>
-        <div class="col-9">
+        <div class="col-lg-9">
           <h2><tiles:getAsString name="title" /></h2>
           <tiles:insertAttribute name="body" />
         </div>
