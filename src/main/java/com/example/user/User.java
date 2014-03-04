@@ -17,6 +17,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
+import javax.persistence.Transient;
 import javax.validation.constraints.NotNull;
 import java.util.Collection;
 import java.util.Collections;
@@ -34,9 +35,7 @@ public class User implements UserDetails {
      * 
      */
     private static final long serialVersionUID = 8399544408338444314L;
-    
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+
     private Long id;
     private String username;
     private String password;
@@ -44,16 +43,13 @@ public class User implements UserDetails {
     private boolean accountNonLocked = true;
     private boolean credentialsNonExpired = true;
     private boolean enabled = true;
-    @Enumerated(EnumType.STRING)
     private Type type = Type.USER;
-
-
-    
-    
     
     /**
      * @return the id
      */
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     public Long getId() {
         return id;
     }
@@ -80,7 +76,7 @@ public class User implements UserDetails {
         this.username = username;
     }
 
-
+    @Enumerated(EnumType.STRING)
     public Type getType() {
         return type;
     }
@@ -89,6 +85,7 @@ public class User implements UserDetails {
         this.type = type;
     }
 
+    @Transient
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {
         return Collections.singletonList(new SimpleGrantedAuthority(type.getRole()));

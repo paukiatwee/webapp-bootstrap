@@ -21,14 +21,23 @@
     <put-attribute name="title" value="Settings" />
     <put-attribute name="body" value="/WEB-INF/views/secure/settings.jsp" />
   </definition>
-  <definition name="/secure/user" extends="secure">
-    <put-attribute name="title" value="User" />
-    <put-attribute name="body" value="/WEB-INF/views/secure/user.jsp" />
-  </definition>
+
+  <!-- users -->
   <definition name="/secure/users" extends="secure">
     <put-attribute name="title" value="Users" />
-    <put-attribute name="body" value="/WEB-INF/views/secure/users.jsp" />
+    <put-attribute name="body" value="/WEB-INF/views/secure/users/index.jsp" />
   </definition>
+  <definition name="/secure/users/new" extends="secure">
+    <put-attribute name="title" value="Add User" />
+    <put-attribute name="body" value="/WEB-INF/views/secure/users/form.jsp" />
+  </definition>
+  <definition name="/secure/users/edit" extends="secure">
+    <put-attribute name="title" value="Edit User" />
+    <put-attribute name="body" value="/WEB-INF/views/secure/users/form.jsp" />
+  </definition>
+  <!-- end users -->
+
+
   <definition name="/secure/system" extends="secure">
     <put-attribute name="title" value="System Properties" />
     <put-attribute name="body" value="/WEB-INF/views/secure/system.jsp" />

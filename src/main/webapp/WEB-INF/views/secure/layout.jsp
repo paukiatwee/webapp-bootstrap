@@ -28,6 +28,12 @@
         </div>
         <div class="col-lg-9">
           <h2><tiles:getAsString name="title" /></h2>
+          <c:if test="${not empty success}">
+            <div class="alert alert-success alert-dismissable">
+              <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+              <strong>Success!</strong> ${successMessage}
+            </div>
+          </c:if>
           <tiles:insertAttribute name="body" />
         </div>
       </div>

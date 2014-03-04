@@ -14,5 +14,4 @@ public interface UserService {
     void delete(long id);
     List<User> getAllAdmins();
     User read(long id);
-
 }

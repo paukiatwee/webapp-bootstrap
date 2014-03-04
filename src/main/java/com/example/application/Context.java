@@ -13,7 +13,7 @@ import org.springframework.web.context.ServletContextAware;
 
 /**
  * A class set properties to servlet context to
- * enble access the data at jsp.
+ * enable access the data at jsp.
  * @author Pau Kiat Wee (mailto:paukiatwee@gmail.com)
  *
  */
