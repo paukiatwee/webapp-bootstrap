@@ -11,26 +11,26 @@
   
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    <org.springframework.version>4.0.0.RELEASE</org.springframework.version>
-    <org.springframework.spring-security.version>3.2.0.RELEASE</org.springframework.spring-security.version>
-    <org.hibernate.version>4.3.0.Final</org.hibernate.version>
-    <org.hibernate.hibernate-validator.version>5.0.1.Final</org.hibernate.hibernate-validator.version>
-    <org.hibernate.hibernate-jpamodelgen.version>1.2.0.Final</org.hibernate.hibernate-jpamodelgen.version>
-    <net.sf.ehcache.version>2.6.6</net.sf.ehcache.version>
+    <org.springframework.version>4.0.2.RELEASE</org.springframework.version>
+    <org.springframework.spring-security.version>3.2.1.RELEASE</org.springframework.spring-security.version>
+    <org.hibernate.version>4.3.4.Final</org.hibernate.version>
+    <org.hibernate.hibernate-validator.version>5.1.0.Final</org.hibernate.hibernate-validator.version>
+    <org.hibernate.hibernate-jpamodelgen.version>4.3.4.Final</org.hibernate.hibernate-jpamodelgen.version>
+    <net.sf.ehcache.version>2.6.8</net.sf.ehcache.version>
     <org.codehaus.jackson.version>1.9.12</org.codehaus.jackson.version>
-    <org.slf4j.version>1.7.5</org.slf4j.version>
-    <ch.qos.logback.version>1.0.13</ch.qos.logback.version>
-    <org.hsqldb.version>2.3.1</org.hsqldb.version>
+    <org.slf4j.version>1.7.6</org.slf4j.version>
+    <ch.qos.logback.version>1.1.1</ch.qos.logback.version>
+    <org.hsqldb.version>2.3.2</org.hsqldb.version>
     <com.jolbox.bonecp.version>0.8.0.RELEASE</com.jolbox.bonecp.version>
-    <com.google.guava.version>15.0</com.google.guava.version>
+    <com.google.guava.version>16.0.1</com.google.guava.version>
     <joda-time.joda-time.version>2.3</joda-time.joda-time.version>
     <servlet.version>3.1.0</servlet.version>
     <jstl.version>1.2</jstl.version>
-    <org.eclipse.jetty.version>9.1.0.v20131115</org.eclipse.jetty.version>
+    <org.eclipse.jetty.version>9.1.3.v20140225</org.eclipse.jetty.version>
     <org.apache.tiles.version>3.0.3</org.apache.tiles.version>
     <junit.version>4.11</junit.version>
     <org.mockito.version>1.9.5</org.mockito.version>
-    <org.liquibase.version>3.0.8</org.liquibase.version>
+    <org.liquibase.version>3.1.1</org.liquibase.version>
     <build.timestamp>${maven.build.timestamp}</build.timestamp>
     <maven.build.timestamp.format>yyyyMMdd-HHmm</maven.build.timestamp.format>
   </properties>
@@ -332,7 +332,7 @@
     <dependency>
       <groupId>mysql</groupId>
       <artifactId>mysql-connector-java</artifactId>
-      <version>5.1.27</version>
+      <version>5.1.29</version>
       <scope>runtime</scope>
     </dependency>
     <!-- JDBC Driver for PostgreSQL -->
@@ -494,7 +494,7 @@
     <dependency>
       <groupId>commons-fileupload</groupId>
       <artifactId>commons-fileupload</artifactId>
-      <version>1.3</version>
+      <version>1.3.1</version>
     </dependency>
     <!-- for common-fileupload -->
     <dependency>
