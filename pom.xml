@@ -11,8 +11,8 @@
   
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    <org.springframework.version>4.0.2.RELEASE</org.springframework.version>
-    <org.springframework.spring-security.version>3.2.1.RELEASE</org.springframework.spring-security.version>
+    <org.springframework.version>4.0.3.RELEASE</org.springframework.version>
+    <org.springframework.spring-security.version>3.2.3.RELEASE</org.springframework.spring-security.version>
     <org.hibernate.version>4.3.4.Final</org.hibernate.version>
     <org.hibernate.hibernate-validator.version>5.1.0.Final</org.hibernate.hibernate-validator.version>
     <org.hibernate.hibernate-jpamodelgen.version>4.3.4.Final</org.hibernate.hibernate-jpamodelgen.version>
@@ -332,7 +332,7 @@
     <dependency>
       <groupId>mysql</groupId>
       <artifactId>mysql-connector-java</artifactId>
-      <version>5.1.29</version>
+      <version>5.1.30</version>
       <scope>runtime</scope>
     </dependency>
     <!-- JDBC Driver for PostgreSQL -->
