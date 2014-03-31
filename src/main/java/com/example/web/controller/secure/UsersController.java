@@ -46,7 +46,7 @@ public class UsersController {
         if(result.hasErrors()) {
             return "/secure/users/new";
         }
-        userService.update(model);
+        userService.add(model);
         redirectAttributes.addFlashAttribute("success", Boolean.TRUE);
         redirectAttributes.addFlashAttribute("successMessage", "Successfully added new User");
         return "redirect:/secure/users";
@@ -54,7 +54,9 @@ public class UsersController {
 
     @RequestMapping(value = "/{id}", method = RequestMethod.GET)
     public String view(Map<String, Object> m, @PathVariable long id) {
-        m.put("model", userService.read(id));
+        User user = userService.read(id);
+        user.setPassword(null);
+        m.put("model", user);
         return "/secure/users/edit";
     }
 

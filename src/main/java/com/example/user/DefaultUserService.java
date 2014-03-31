@@ -32,15 +32,15 @@ class DefaultUserService implements UserService {
     }
 
     @Override
-    public void add(User admin) {
-        admin.setPassword(encoder.encodePassword(admin.getPassword(), null));
-        entityManager.persist(admin);
+    public void add(User user) {
+        user.setPassword(encoder.encodePassword(user.getPassword(), null));
+        entityManager.persist(user);
         entityManager.flush();
     }
 
     @Override
-    public User update(User admin) {
-        return entityManager.merge(admin);
+    public User update(User user) {
+        return entityManager.merge(user);
     }
 
     @Override

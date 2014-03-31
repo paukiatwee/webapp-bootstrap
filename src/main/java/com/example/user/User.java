@@ -44,6 +44,7 @@ public class User implements UserDetails {
     private boolean credentialsNonExpired = true;
     private boolean enabled = true;
     private Type type = Type.USER;
+    private Collection<? extends GrantedAuthority> authorities;
     
     /**
      * @return the id
@@ -88,7 +89,11 @@ public class User implements UserDetails {
     @Transient
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {
-        return Collections.singletonList(new SimpleGrantedAuthority(type.getRole()));
+        return authorities;
+    }
+
+    public void setAuthorities(Collection<? extends GrantedAuthority> authorities) {
+        this.authorities = authorities;
     }
 
     /**
