@@ -11,26 +11,25 @@
   
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    <org.springframework.version>4.0.3.RELEASE</org.springframework.version>
-    <org.springframework.spring-security.version>3.2.3.RELEASE</org.springframework.spring-security.version>
-    <org.hibernate.version>4.3.4.Final</org.hibernate.version>
-    <org.hibernate.hibernate-validator.version>5.1.0.Final</org.hibernate.hibernate-validator.version>
-    <org.hibernate.hibernate-jpamodelgen.version>4.3.4.Final</org.hibernate.hibernate-jpamodelgen.version>
-    <net.sf.ehcache.version>2.6.8</net.sf.ehcache.version>
+    <org.springframework.version>4.0.6.RELEASE</org.springframework.version>
+    <org.springframework.spring-security.version>3.2.5.RELEASE</org.springframework.spring-security.version>
+    <org.hibernate.version>4.3.6.Final</org.hibernate.version>
+    <org.hibernate.hibernate-validator.version>5.1.2.Final</org.hibernate.hibernate-validator.version>
+    <org.hibernate.hibernate-jpamodelgen.version>4.3.6.Final</org.hibernate.hibernate-jpamodelgen.version>
+    <net.sf.ehcache.version>2.6.9</net.sf.ehcache.version>
     <org.codehaus.jackson.version>1.9.12</org.codehaus.jackson.version>
-    <org.slf4j.version>1.7.6</org.slf4j.version>
-    <ch.qos.logback.version>1.1.1</ch.qos.logback.version>
+    <org.slf4j.version>1.7.7</org.slf4j.version>
+    <ch.qos.logback.version>1.1.2</ch.qos.logback.version>
     <org.hsqldb.version>2.3.2</org.hsqldb.version>
     <com.jolbox.bonecp.version>0.8.0.RELEASE</com.jolbox.bonecp.version>
-    <com.google.guava.version>16.0.1</com.google.guava.version>
     <joda-time.joda-time.version>2.3</joda-time.joda-time.version>
     <servlet.version>3.1.0</servlet.version>
     <jstl.version>1.2</jstl.version>
     <org.eclipse.jetty.version>9.1.3.v20140225</org.eclipse.jetty.version>
-    <org.apache.tiles.version>3.0.3</org.apache.tiles.version>
+    <org.apache.tiles.version>3.0.4</org.apache.tiles.version>
     <junit.version>4.11</junit.version>
     <org.mockito.version>1.9.5</org.mockito.version>
-    <org.liquibase.version>3.1.1</org.liquibase.version>
+    <org.liquibase.version>3.2.2</org.liquibase.version>
     <build.timestamp>${maven.build.timestamp}</build.timestamp>
     <maven.build.timestamp.format>yyyyMMdd-HHmm</maven.build.timestamp.format>
   </properties>
@@ -63,8 +62,8 @@
           <artifactId>maven-compiler-plugin</artifactId>
           <version>3.1</version>
           <configuration>
-            <source>1.7</source>
-            <target>1.7</target>
+            <source>1.8</source>
+            <target>1.8</target>
             <encoding>UTF-8</encoding>
             <compilerArgument>-proc:none</compilerArgument>
           </configuration>
@@ -96,6 +95,18 @@
           <groupId>org.eclipse.jetty</groupId>
           <artifactId>jetty-maven-plugin</artifactId>
           <version>${org.eclipse.jetty.version}</version>
+          <dependencies>
+            <dependency>
+              <groupId>org.ow2.asm</groupId>
+              <artifactId>asm</artifactId>
+              <version>5.0.3</version>
+            </dependency>
+            <dependency>
+              <groupId>org.ow2.asm</groupId>
+              <artifactId>asm-commons</artifactId>
+              <version>5.0.3</version>
+            </dependency>
+          </dependencies>
         </plugin>
         <plugin>
           <groupId>org.apache.tomcat.maven</groupId>
@@ -133,12 +144,6 @@
             <!-- disable jar scanning for annotation for fast startup -->
             <webInfIncludeJarPattern>^ignore.jar$</webInfIncludeJarPattern>
           </webAppConfig>
-          <connectors>
-            <connector implementation="org.eclipse.jetty.server.nio.SelectChannelConnector">
-              <port>8080</port>
-              <maxIdleTime>3600000</maxIdleTime>
-            </connector>
-          </connectors>
           <scanIntervalSeconds>0</scanIntervalSeconds>
           <scanTargetPatterns>
             <scanTargetPattern>
@@ -272,18 +277,6 @@
     </plugins>
   </build>
   <dependencies>
-    <dependency>
-      <groupId>com.google.guava</groupId>
-      <artifactId>guava</artifactId>
-      <version>${com.google.guava.version}</version>
-    </dependency>
-    <!--  date time utility -->
-    <dependency>
-      <groupId>joda-time</groupId>
-      <artifactId>joda-time</artifactId>
-      <version>${joda-time.joda-time.version}</version>
-    </dependency>
-    
     <!-- Jackson JSON Mapper -->
     <dependency>
       <groupId>org.codehaus.jackson</groupId>
@@ -332,7 +325,7 @@
     <dependency>
       <groupId>mysql</groupId>
       <artifactId>mysql-connector-java</artifactId>
-      <version>5.1.30</version>
+      <version>5.1.32</version>
       <scope>runtime</scope>
     </dependency>
     <!-- JDBC Driver for PostgreSQL -->
