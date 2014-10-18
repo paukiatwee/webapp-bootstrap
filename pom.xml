@@ -11,7 +11,7 @@
   
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    <org.springframework.version>4.1.0.RELEASE</org.springframework.version>
+    <org.springframework.version>4.1.1.RELEASE</org.springframework.version>
     <org.springframework.spring-security.version>3.2.5.RELEASE</org.springframework.spring-security.version>
     <org.hibernate.version>4.3.6.Final</org.hibernate.version>
     <org.hibernate.hibernate-validator.version>5.1.2.Final</org.hibernate.hibernate-validator.version>
@@ -26,9 +26,9 @@
     <servlet.version>3.1.0</servlet.version>
     <jstl.version>1.2</jstl.version>
     <org.eclipse.jetty.version>9.1.3.v20140225</org.eclipse.jetty.version>
-    <org.apache.tiles.version>3.0.4</org.apache.tiles.version>
+    <org.apache.tiles.version>3.0.5</org.apache.tiles.version>
     <junit.version>4.11</junit.version>
-    <org.mockito.version>1.9.5</org.mockito.version>
+    <org.mockito.version>1.10.8</org.mockito.version>
     <org.liquibase.version>3.2.2</org.liquibase.version>
     <build.timestamp>${maven.build.timestamp}</build.timestamp>
     <maven.build.timestamp.format>yyyyMMdd-HHmm</maven.build.timestamp.format>
