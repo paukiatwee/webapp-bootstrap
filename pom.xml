@@ -11,25 +11,25 @@
   
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    <org.springframework.version>4.1.5.RELEASE</org.springframework.version>
-    <org.springframework.spring-security.version>3.2.6.RELEASE</org.springframework.spring-security.version>
-    <org.hibernate.version>4.3.8.Final</org.hibernate.version>
-    <org.hibernate.hibernate-validator.version>5.2.0.Final</org.hibernate.hibernate-validator.version>
+    <org.springframework.version>4.2.0.RELEASE</org.springframework.version>
+    <org.springframework.spring-security.version>4.0.2.RELEASE</org.springframework.spring-security.version>
+    <org.hibernate.version>4.3.9.Final</org.hibernate.version>
+    <org.hibernate.hibernate-validator.version>5.2.1.Final</org.hibernate.hibernate-validator.version>
     <org.hibernate.hibernate-jpamodelgen.version>4.3.8.Final</org.hibernate.hibernate-jpamodelgen.version>
-    <net.sf.ehcache.version>2.6.10</net.sf.ehcache.version>
+    <net.sf.ehcache.version>2.6.11</net.sf.ehcache.version>
     <org.codehaus.jackson.version>1.9.12</org.codehaus.jackson.version>
-    <org.slf4j.version>1.7.10</org.slf4j.version>
-    <ch.qos.logback.version>1.1.2</ch.qos.logback.version>
-    <org.hsqldb.version>2.3.2</org.hsqldb.version>
+    <org.slf4j.version>1.7.12</org.slf4j.version>
+    <ch.qos.logback.version>1.1.3</ch.qos.logback.version>
+    <org.hsqldb.version>2.3.3</org.hsqldb.version>
     <com.jolbox.bonecp.version>0.8.0.RELEASE</com.jolbox.bonecp.version>
     <joda-time.joda-time.version>2.3</joda-time.joda-time.version>
     <servlet.version>3.1.0</servlet.version>
     <jstl.version>1.2</jstl.version>
-    <org.eclipse.jetty.version>9.1.3.v20140225</org.eclipse.jetty.version>
+    <org.eclipse.jetty.version>9.3.2.v20150730</org.eclipse.jetty.version>
     <org.apache.tiles.version>3.0.5</org.apache.tiles.version>
     <junit.version>4.12</junit.version>
     <org.mockito.version>1.10.19</org.mockito.version>
-    <org.liquibase.version>3.3.2</org.liquibase.version>
+    <org.liquibase.version>3.4.1</org.liquibase.version>
     <build.timestamp>${maven.build.timestamp}</build.timestamp>
     <maven.build.timestamp.format>yyyyMMdd-HHmm</maven.build.timestamp.format>
   </properties>
@@ -164,7 +164,6 @@
             </goals>
             <configuration>
               <scanIntervalSeconds>0</scanIntervalSeconds>
-              <daemon>true</daemon>
             </configuration>
           </execution>
           <execution>
@@ -325,16 +324,16 @@
     <dependency>
       <groupId>mysql</groupId>
       <artifactId>mysql-connector-java</artifactId>
-      <version>5.1.34</version>
+      <version>5.1.36</version>
       <scope>runtime</scope>
     </dependency>
     <!-- JDBC Driver for PostgreSQL -->
-    <!--<dependency>-->
-      <!--<groupId>postgresql</groupId>-->
-      <!--<artifactId>postgresql</artifactId>-->
-      <!--<version>9.1-901-1.jdbc4</version>-->
-      <!--<scope>runtime</scope>-->
-    <!--</dependency>-->
+    <dependency>
+      <groupId>postgresql</groupId>
+      <artifactId>postgresql</artifactId>
+      <version>9.1-901-1.jdbc4</version>
+      <scope>runtime</scope>
+    </dependency>
     
     <!-- Lightweight connection pool -->
     <dependency>
